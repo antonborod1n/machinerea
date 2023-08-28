@@ -126,6 +126,14 @@
     gap: 36px;
   }
 
+  &__service-favorit,
+  &__service-compare,
+  &__service-massage {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
   &__service-link {
     position: relative;
     display: flex;
