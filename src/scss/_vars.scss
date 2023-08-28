@@ -1,0 +1,61 @@
+/* COLOR */
+$accent: #22b8af;
+$text: #1a1d1b;
+$gray: #747474;
+$mid-gray: #d9d9d9;
+$red: #f00;
+
+//tags
+$blue: #0061b7;
+$yellow: #ffb800;
+$dark-red: #ffb800;
+$coral: #ff4747;
+$green: #06c960;
+
+/* FONTS */
+%inter-700 {
+  font-family: 'Inter-Bold';
+  font-weight: 700;
+}
+%georgia-400 {
+  font-family: 'Georgia-Regular';
+  font-weight: 400;
+}
+%sourcesans-400 {
+  font-family: 'SourceSansPro-Regular';
+  font-weight: 400;
+}
+%sourcesans-600 {
+  font-family: 'SourceSansPro-Semibold';
+  font-weight: 600;
+}
+%sourcesans-700 {
+  font-family: 'SourceSansPro-Bold';
+  font-weight: 700;
+}
+
+/* BUTTON */
+%btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #ffffff;
+  background-color: $accent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+%btn-r {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  color: $text;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 0;
+  cursor: pointer;
+}

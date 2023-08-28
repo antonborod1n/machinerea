@@ -1,0 +1,109 @@
+.header {
+  &__top {
+    height: 58px;
+    padding: 16px 0;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list {
+    display: flex;
+    gap: 45px;
+  }
+  &__top-item {
+  }
+  &__top-btn {
+    @extend %btn-r;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    padding-right: 26px;
+  }
+  &__slogan {
+    color: $gray;
+  }
+  &__user-link {
+    color: $text;
+    &::before {
+      content: '';
+    }
+  }
+  &__main {
+    height: 108px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 24px 0;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__catalog-btn {
+    @extend %btn;
+    @extend %sourcesans-600;
+    width: 160px;
+    padding: 17px 30px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    width: 381px;
+    padding: 17px 24px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+  }
+  &__service-list {
+    display: flex;
+    gap: 36px;
+  }
+  &__service-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+  &__cart-num {
+    position: absolute;
+    top: -4px;
+    right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %sourcesans-700;
+    width: 14px;
+    height: 14px;
+    font-size: 8px;
+    border-radius: 50%;
+    background-color: $red;
+    color: #ffffff;
+  }
+  &__service-icon {
+    width: 24px;
+    height: 24px;
+  }
+  &__service-text {
+    font-size: 12px;
+    line-height: 18px;
+    color: $gray;
+  }
+  &__btn-add {
+    @extend %btn;
+    @extend %sourcesans-600;
+    width: 229px;
+    padding: 17px 30px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}

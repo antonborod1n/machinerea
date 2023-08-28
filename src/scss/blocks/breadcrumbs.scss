@@ -1,0 +1,32 @@
+.breadcrumbs {
+  padding: 24px 0;
+}
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.breadcrumbs__item {
+  position: relative;
+  color: $text;
+  &:after {
+    content: '/';
+    padding: 0 6px;
+  }
+  &:last-child {
+    color: $gray;
+    &:after {
+      display: none;
+    }
+  }
+}
+.breadcrumbs__link {
+  color: inherit;
+  &.drop-down {
+    background-image: url('../images/icons/chevron-down-gray.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 16px;
+    padding-right: 20px;
+  }
+}

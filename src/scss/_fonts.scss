@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Inter-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Inter-Bold'), url('../fonts/Inter-Bold.woff2') format('woff2'),
+    url('../fonts/Inter-Bold.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Georgia-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Georgia-Regular'), url('../fonts/Georgia-Regular.woff2') format('woff2'),
+    url('../fonts/Georgia-Regular.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SourceSansPro-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('SourceSansPro-Bold'), url('../fonts/SourceSansPro-Bold.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-Bold.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SourceSansPro-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('SourceSansPro-Regular'), url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-Regular.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SourceSansPro-Semibold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('SourceSansPro-Semibold'), url('../fonts/SourceSansPro-Semibold.woff2') format('woff2'),
+    url('../fonts/SourceSansPro-Semibold.woff') format('woff');
+  font-display: swap;
+}

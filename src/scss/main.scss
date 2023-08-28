@@ -1,0 +1,14 @@
+@import 'vars';
+/* Переменные */
+@import 'fonts';
+/* Шрифты */
+@import 'reset';
+/* Сброс */
+@import 'global';
+/* Глобальные стили */
+
+@import './blocks/header.scss';
+@import './blocks/footer.scss';
+
+/* МЕДИА-ЗАПРОСЫ */
+@import 'media';

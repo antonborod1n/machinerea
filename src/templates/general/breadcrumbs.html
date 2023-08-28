@@ -1,0 +1,23 @@
+<div class="breadcrumbs">
+  <div class="container">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#"> Оборудование </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link drop-down" href="#">
+          Станки и оборудование (<span>1378</span>)
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+  const item = document.querySelectorAll('.breadcrumbs__link ');
+  console.log(item);
+  item.forEach((item) => {
+    if (item.classList.contains('drop-down')) {
+      item.classList.add('is-active');
+    }
+  });
+</script>

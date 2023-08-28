@@ -1,0 +1,114 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @extend %sourcesans-400;
+  font-size: 16px;
+  line-height: 26px;
+  font-style: normal;
+  color: $text;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1490px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.logo__img {
+  max-width: 177px;
+  height: 24px;
+}
+
+.footer {
+  .logo__img {
+    @media (max-width: 768px) {
+      max-width: 148px;
+      height: 20px;
+    }
+  }
+}
+
+/* FORM */
+.input__box {
+  position: relative;
+}
+
+.input {
+  @extend %sourcesans-400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $text;
+  width: 100%;
+  height: 36px;
+  border-radius: 5px;
+  border: 1px solid $mid-gray;
+  background: #ffffff;
+  padding: 0 16px;
+  cursor: auto;
+}
+
+.input__search-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  @extend %btn-r;
+  width: 18px;
+  height: 18px;
+  background-image: url('../images/icons/search-input-grey.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* CHECKBOX */
+.label {
+  display: flex;
+  cursor: pointer;
+}
+.label-name {
+  padding-left: 24px;
+}
+.input-box {
+  margin-top: 5px;
+}
+.checkbox {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  opacity: 0;
+  &:checked + .filter__checkbox-marker {
+    background-image: url('../images/icons/check-input-white.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: $accent;
+    border: 1px solid $accent;
+  }
+}
+.checkbox-marker {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid $mid-gray;
+  background-color: #ffffff;
+}
