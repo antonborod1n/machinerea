@@ -4,36 +4,49 @@
     padding: 16px 0;
     border-bottom: 1px solid #d9d9d9;
   }
+
   &__top-inner {
     display: flex;
     justify-content: space-between;
   }
+
   &__list {
     display: flex;
     gap: 45px;
   }
-  &__top-item {
-  }
+
   &__top-btn {
     @extend %btn-r;
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
     padding-right: 26px;
+    background-image: url('../images/icons/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 18px;
   }
+
   &__slogan {
     color: $gray;
   }
+
   &__user-link {
+    position: relative;
     color: $text;
     &::before {
-      content: '';
+      position: absolute;
+      top: 0;
+      left: -30px;
+      content: url('../images/icons/user.svg');
     }
   }
+
   &__main {
     height: 108px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   }
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -41,31 +54,78 @@
     flex-wrap: wrap;
     padding: 24px 0;
   }
+
   &__box {
     display: flex;
     align-items: center;
     gap: 16px;
   }
+
   &__catalog-btn {
-    @extend %btn;
+    display: flex;
+    justify-content: space-between;
     @extend %sourcesans-600;
+    color: #ffffff;
+    background-color: $accent;
+    border-radius: 5px;
+    cursor: pointer;
     width: 160px;
-    padding: 17px 30px;
-    font-size: 16px;
-    line-height: 26px;
+    padding: 17px 35px;
+    transition: all 0.3s;
+
+    /*     &:hover {
+      .catalog-btn-line1 {
+        transform: rotate(-45deg);
+        transition: transform 0.3s;
+        transform-origin: left center;
+      }
+      .catalog-btn-line2 {
+        display: none;
+      }
+      .catalog-btn-line3 {
+        transform: rotate(45deg) translate(-10px, 0px);
+        transition: transform 0.3s;
+        transform-origin: left center;
+      }
+    } */
   }
+
+  .catalog-btn-box {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 24px;
+    height: 24px;
+
+    span {
+      display: inline-block;
+      background-color: #ffffff;
+      width: 20px;
+      height: 2px;
+      border-radius: 5px;
+      margin-bottom: 4px;
+    }
+  }
+
   &__search {
     display: flex;
     align-items: center;
     width: 381px;
+    height: 60px;
+    color: $text;
     padding: 17px 24px;
     border-radius: 5px;
     background-color: #f4f4f4;
+    &::placeholder {
+      color: $text;
+    }
   }
+
   &__service-list {
     display: flex;
     gap: 36px;
   }
+
   &__service-link {
     position: relative;
     display: flex;
@@ -74,6 +134,7 @@
     align-items: center;
     gap: 4px;
   }
+
   &__cart-num {
     position: absolute;
     top: -4px;
@@ -89,15 +150,18 @@
     background-color: $red;
     color: #ffffff;
   }
+
   &__service-icon {
     width: 24px;
     height: 24px;
   }
+
   &__service-text {
     font-size: 12px;
     line-height: 18px;
     color: $gray;
   }
+
   &__btn-add {
     @extend %btn;
     @extend %sourcesans-600;
