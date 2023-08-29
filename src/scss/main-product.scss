@@ -1,8 +1,45 @@
 @import 'vars';
 
 @import './blocks/breadcrumbs.scss';
+@import './pages/product-page/control.scss';
+@import './pages/product-page/first-screen.scss';
+@import './pages/product-page/widgets.scss';
+
 @import './pages/catalog-page/block-top.scss';
 @import './pages/catalog-page/block-product.scss';
 @import './pages/catalog-page/block-filter.scss';
 @import './pages/catalog-page/block-catalog.scss';
 @import './blocks/pagination.scss';
+
+.product-page {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 352px;
+    grid-template-rows: 100px 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 37px;
+    padding-bottom: 96px;
+
+    /* @media (max-width: 768px) {
+              grid-template-columns: 1fr;
+            } */
+
+    .top {
+      grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .content {
+      grid-area: 2 / 1 / 3 / 2;
+      /* @media (max-width: 768px) {
+                  grid-area: 1 / 1 / 2 / 2;
+                } */
+    }
+
+    .aside {
+      grid-area: 2 / 2 / 3 / 3;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}

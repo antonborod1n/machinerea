@@ -1,0 +1,46 @@
+.control {
+  .control__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .control__product-page-title {
+    margin-bottom: 24px;
+  }
+  .control__list {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  .control__item {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .control__link {
+    font-size: 14px;
+    line-height: 22px;
+    color: $blue;
+  }
+  .control__btn {
+    @extend %btn-r;
+    color: $blue;
+    padding-left: 28px;
+    background-repeat: no-repeat;
+    background-position: center left;
+    &-add {
+      background-image: url('../images/icons/bookmark-blue.svg');
+    }
+    &-comp {
+      background-image: url('../images/icons/chart-bar-blue.svg');
+    }
+    &-new {
+      background-image: url('../images/icons/notification-blue.svg');
+    }
+  }
+  .product__info {
+    margin-bottom: 0;
+  }
+  .reviews {
+    color: $blue;
+  }
+}
