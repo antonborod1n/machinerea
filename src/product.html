@@ -19,14 +19,18 @@
 
           <div class="content">
             <%= require('html-loader!./templates/block/product-page/first-screen.html').default %>
-            <%= require('html-loader!./templates/block/catalog-page/not-sale.html').default %> <%=
+            <%= require('html-loader!./templates/block/product-page/сharacteristics.html').default
+            %> <%= require('html-loader!./templates/block/product-page/description.html').default %>
+            <%= require('html-loader!./templates/block/product-page/reviews.html').default %> <%=
             require('html-loader!./templates/block/catalog-page/advertising.html').default %> <%=
             require('html-loader!./templates/block/catalog-page/watched.html').default %> <%=
             require('html-loader!./templates/block/catalog-page/recommend.html').default %> <%=
             require('html-loader!./templates/block/catalog-page/bottom.html').default %>
           </div>
 
-          <aside class="aside"><%= require('html-loader!./templates/block/product-page/widgets.html').default %></aside>
+          <aside class="aside">
+            <%= require('html-loader!./templates/block/product-page/widgets.html').default %>
+          </aside>
         </div>
       </div>
     </main>
