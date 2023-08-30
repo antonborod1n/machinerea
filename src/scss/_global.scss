@@ -339,3 +339,36 @@ input {
 .rating[data-total-value='5'] .rating__item:nth-child(n + 1) {
   color: $yellow;
 } */
+
+.subtitle {
+  @extend %sourcesans-600;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.block__top-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-edit {
+  position: relative;
+  @extend %btn-r;
+  @extend %sourcesans-600;
+  font-size: 16px;
+  line-height: 26px;
+  color: $blue;
+  padding: 0 28px;
+
+  background-image: url('../images/icons/edit-blue.svg');
+  background-repeat: no-repeat;
+  background-position: center left;
+
+  &::after {
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    content: url('../images/icons/tips.svg');
+  }
+}

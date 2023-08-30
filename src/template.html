@@ -9,20 +9,29 @@
 
   <body>
     <%= require('html-loader!./templates/general/header.html').default %>
-    <main class="main catalog-page">
+    <main class="main product-page">
       <%= require('html-loader!./templates/general/breadcrumbs.html').default %>
-      <!--       <div class="container">
+      <div class="container">
         <div class="wrapper">
+          <div class="top">
+            <%= require('html-loader!./templates/block/product-page/control.html').default %>
+          </div>
+
           <div class="content">
-            <%= require('html-loader!./templates/block/catalog-page/not-sale.html').default %> <%=
+            <%= require('html-loader!./templates/block/product-page/first-screen.html').default %>
+            <%= require('html-loader!./templates/block/offer-page/tabs.html').default %> <%=
+            require('html-loader!./templates/block/product-page/description.html').default %> <%=
             require('html-loader!./templates/block/catalog-page/advertising.html').default %> <%=
             require('html-loader!./templates/block/catalog-page/watched.html').default %> <%=
             require('html-loader!./templates/block/catalog-page/recommend.html').default %> <%=
             require('html-loader!./templates/block/catalog-page/bottom.html').default %>
           </div>
-          <aside class="aside"></aside>
+
+          <aside class="aside">
+            <%= require('html-loader!./templates/block/product-page/widgets.html').default %>
+          </aside>
         </div>
-      </div> -->
+      </div>
     </main>
     <%= require('html-loader!./templates/general/footer.html').default %>
   </body>
