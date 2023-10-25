@@ -1,35 +1,41 @@
 {
-  "name": "webpack_start",
+  "name": "start_gulp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack serve"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Anton",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-proposal-class-properties": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
-    "babel-loader": "^8.2.3",
-    "babel-polyfill": "^6.26.0",
-    "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^9.0.1",
-    "css-loader": "^6.5.1",
-    "html-webpack-plugin": "^5.5.0",
-    "node-sass": "^6.0.1",
-    "sass-loader": "^12.3.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.64.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.4.0"
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-avif": "^1.1.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-fonter": "^0.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-include": "^2.4.1",
+    "gulp-less": "^5.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-size": "^4.0.1",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify-es": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.58.3",
+    "swiper": "^9.1.1"
   },
   "dependencies": {
-    "@babel/plugin-transform-runtime": "^7.16.0",
-    "babel-preset-es2017": "^6.24.1",
-    "html-loader": "^4.2.0",
-    "regenerator-runtime": "^0.13.9"
+    "nouislider": "^15.7.1"
   }
 }

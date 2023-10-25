@@ -1,0 +1,26 @@
+/* ADVERTISING */
+.advertising {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 352px));
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 211px;
+    background: #d9d9d9;
+    font-size: 20px;
+    line-height: 30px;
+
+    &:last-child {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}

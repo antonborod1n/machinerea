@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <title>Предложение товара конкретного продавца (объявление)</title>
+  </head>
+
+  <body>
+    <!--=include general/header.html -->
+    <main class="main product-page">
+      <!--=include general/breadcrumbs.html -->
+      <div class="container">
+        <div class="wrapper">
+          <div class="top">
+            <!--=include block/control.html -->
+          </div>
+
+          <div class="content">
+            <!--=include block/first-screen.html -->
+            <!--=include block/tabs.html -->
+            <!--=include block/description.html -->
+            <!--=include block/advertising.html -->
+            <!--=include block/watched.html -->
+            <!--=include block/recommend.html -->
+            <!--=include block/bottom.html -->
+          </div>
+
+          <aside class="aside">
+            <!--=include block/widgets.html -->
+          </aside>
+        </div>
+      </div>
+    </main>
+    <!--=include general/footer.html -->
+    <!--=include block/quick-order.html -->
+    <!--=include general/modal.html -->
+  </body>
+
+  <div class="dev-block">
+    <ul class="dev-block__pages">
+      <li><a href="/">Главная</a></li>
+      <li><a href="catalog.html">Каталог</a></li>
+      <li><a href="product.html">Товар</a></li>
+      <li><a href="offer.html">Предложение</a></li>
+    </ul>
+  </div>
+
+  <script src="js/main.min.js"></script>
+
+  <style>
+    .dev-block {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 200px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #999;
+      opacity: 0.3;
+      transition: opacity 0.3s;
+    }
+    .dev-block:hover {
+      opacity: 0.9;
+    }
+    .dev-block__pages {
+      margin-bottom: 10px;
+    }
+    .dev-block__pages li {
+      margin-left: 6px;
+    }
+    .dev-block__pages .is-current {
+      color: #666;
+      font-weight: bold;
+    }
+    .dev-block__switch {
+      position: relative;
+      display: block;
+      border: 1px solid #999;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .dev-block__switch input {
+      position: absolute;
+      opacity: 0.001;
+    }
+    .dev-block__switch-els {
+      display: flex;
+    }
+    .dev-block__switch-els::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: #ddd;
+      transition: left 0.3s;
+    }
+    .dev-block__switch input:checked + .dev-block__switch-els::before {
+      left: 50%;
+    }
+    .dev-block__switch-el {
+      position: relative;
+      flex: 1 0 50%;
+      padding: 2px 0 0;
+      text-align: center;
+      user-select: none;
+    }
+    .dev-block__dialog-btn {
+      margin: 0 2px 8px 0;
+      padding: 2px 6px;
+    }
+    @media (max-width: 768px) {
+      .dev-block {
+        display: none;
+      }
+    }
+  </style>
+</html>

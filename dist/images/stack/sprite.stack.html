@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-arrow-left-black-dims { width: 20px; height: 20px; }
+ .svg-arrow-left-blue-dims { width: 20px; height: 20px; }
+ .svg-bookmark-dims { width: 25px; height: 24px; }
+ .svg-bookmark-blue-dims { width: 20px; height: 20px; }
+ .svg-burger-dims { width: 20px; height: 14px; }
+ .svg-burger-black-dims { width: 20px; height: 20px; }
+ .svg-chart-bar-dims { width: 24px; height: 24px; }
+ .svg-chart-bar-blue-dims { width: 20px; height: 20px; }
+ .svg-chat-dims { width: 24px; height: 24px; }
+ .svg-chat-gray-dims { width: 20px; height: 20px; }
+ .svg-check-input-white-dims { width: 16px; height: 16px; }
+ .svg-check-smal-dims { width: 9px; height: 7px; }
+ .svg-chevron-down-dims { width: 18px; height: 18px; }
+ .svg-chevron-down-gray-dims { width: 18px; height: 18px; }
+ .svg-chevron-down-gray16-dims { width: 16px; height: 16px; }
+ .svg-chevron-left-black24-dims { width: 24px; height: 24px; }
+ .svg-chevron-right-accent-dims { width: 16px; height: 16px; }
+ .svg-chevron-right-black24-dims { width: 24px; height: 24px; }
+ .svg-chevron-right-blue-dims { width: 14px; height: 14px; }
+ .svg-chevron-right-grey-dims { width: 16px; height: 16px; }
+ .svg-chevron-up-black16-dims { width: 16px; height: 16px; }
+ .svg-chevron-up-blue-dims { width: 20px; height: 20px; }
+ .svg-circle-success-blue-dims { width: 14px; height: 14px; }
+ .svg-close-dims { width: 24px; height: 24px; }
+ .svg-comment-dims { width: 20px; height: 20px; }
+ .svg-delivery-big-car-dims { width: 16px; height: 16px; }
+ .svg-delivery-box-seam-dims { width: 16px; height: 16px; }
+ .svg-delivery-tabler-car-dims { width: 16px; height: 16px; }
+ .svg-delivery-tabler-run-dims { width: 16px; height: 16px; }
+ .svg-edit-blue-dims { width: 20px; height: 20px; }
+ .svg-emai-bluel-dims { width: 18px; height: 18px; }
+ .svg-exit-red-dims { width: 20px; height: 20px; }
+ .svg-facebook-dims { width: 29px; height: 29px; }
+ .svg-filter-bookmark-dims { width: 20px; height: 20px; }
+ .svg-filter-equalizer-dims { width: 20px; height: 20px; }
+ .svg-filter-equalizer-horizont-dims { width: 14px; height: 14px; }
+ .svg-filter-reset-dims { width: 20px; height: 20px; }
+ .svg-format-line-spacing-dims { width: 20px; height: 20px; }
+ .svg-inst-dims { width: 29px; height: 29px; }
+ .svg-map-dims { width: 20px; height: 20px; }
+ .svg-map-blue-dims { width: 20px; height: 20px; }
+ .svg-menu-login-dims { width: 20px; height: 20px; }
+ .svg-notification-blue-dims { width: 20px; height: 20px; }
+ .svg-phone-blue-dims { width: 18px; height: 18px; }
+ .svg-photo-add-dims { width: 25px; height: 24px; }
+ .svg-protect-blue-dims { width: 20px; height: 20px; }
+ .svg-search-input-grey-dims { width: 18px; height: 18px; }
+ .svg-shopping-cart-dims { width: 25px; height: 24px; }
+ .svg-state1-dims { width: 56px; height: 16px; }
+ .svg-state2-dims { width: 44px; height: 12px; }
+ .svg-state3-dims { width: 44px; height: 12px; }
+ .svg-success-blue-dims { width: 18px; height: 18px; }
+ .svg-sync-blue-dims { width: 20px; height: 20px; }
+ .svg-telegram-dims { width: 29px; height: 29px; }
+ .svg-thumb-down-dims { width: 20px; height: 20px; }
+ .svg-thumb-up-green-dims { width: 20px; height: 20px; }
+ .svg-tips-dims { width: 18px; height: 18px; }
+ .svg-trophy-blue-dims { width: 16px; height: 16px; }
+ .svg-user-dims { width: 20px; height: 20px; }
+ .svg-vk-dims { width: 29px; height: 29px; }
+ .svg-warning-dims { width: 20px; height: 20px; }
+ .svg-warning-red-dims { width: 14px; height: 14px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="arrow-left-black">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#arrow-left-black" class="svg-arrow-left-black-dims" alt="arrow-left-black">
+                    </div>
+                    <h2>arrow-left-black, </h2>
+                </li>
+             <li title="arrow-left-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#arrow-left-blue" class="svg-arrow-left-blue-dims" alt="arrow-left-blue">
+                    </div>
+                    <h2>arrow-left-blue, </h2>
+                </li>
+             <li title="bookmark">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#bookmark" class="svg-bookmark-dims" alt="bookmark">
+                    </div>
+                    <h2>bookmark, </h2>
+                </li>
+             <li title="bookmark-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#bookmark-blue" class="svg-bookmark-blue-dims" alt="bookmark-blue">
+                    </div>
+                    <h2>bookmark-blue, </h2>
+                </li>
+             <li title="burger">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#burger" class="svg-burger-dims" alt="burger">
+                    </div>
+                    <h2>burger, </h2>
+                </li>
+             <li title="burger-black">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#burger-black" class="svg-burger-black-dims" alt="burger-black">
+                    </div>
+                    <h2>burger-black, </h2>
+                </li>
+             <li title="chart-bar">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chart-bar" class="svg-chart-bar-dims" alt="chart-bar">
+                    </div>
+                    <h2>chart-bar, </h2>
+                </li>
+             <li title="chart-bar-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chart-bar-blue" class="svg-chart-bar-blue-dims" alt="chart-bar-blue">
+                    </div>
+                    <h2>chart-bar-blue, </h2>
+                </li>
+             <li title="chat">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chat" class="svg-chat-dims" alt="chat">
+                    </div>
+                    <h2>chat, </h2>
+                </li>
+             <li title="chat-gray">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chat-gray" class="svg-chat-gray-dims" alt="chat-gray">
+                    </div>
+                    <h2>chat-gray, </h2>
+                </li>
+             <li title="check-input-white">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#check-input-white" class="svg-check-input-white-dims" alt="check-input-white">
+                    </div>
+                    <h2>check-input-white, </h2>
+                </li>
+             <li title="check-smal">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#check-smal" class="svg-check-smal-dims" alt="check-smal">
+                    </div>
+                    <h2>check-smal, </h2>
+                </li>
+             <li title="chevron-down">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chevron-down" class="svg-chevron-down-dims" alt="chevron-down">
+                    </div>
+                    <h2>chevron-down, </h2>
+                </li>
+             <li title="chevron-down-gray">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chevron-down-gray" class="svg-chevron-down-gray-dims" alt="chevron-down-gray">
+                    </div>
+                    <h2>chevron-down-gray, </h2>
+                </li>
+             <li title="chevron-down-gray16">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chevron-down-gray16" class="svg-chevron-down-gray16-dims" alt="chevron-down-gray16">
+                    </div>
+                    <h2>chevron-down-gray16, </h2>
+                </li>
+             <li title="chevron-left-black24">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chevron-left-black24" class="svg-chevron-left-black24-dims" alt="chevron-left-black24">
+                    </div>
+                    <h2>chevron-left-black24, </h2>
+                </li>
+             <li title="chevron-right-accent">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chevron-right-accent" class="svg-chevron-right-accent-dims" alt="chevron-right-accent">
+                    </div>
+                    <h2>chevron-right-accent, </h2>
+                </li>
+             <li title="chevron-right-black24">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chevron-right-black24" class="svg-chevron-right-black24-dims" alt="chevron-right-black24">
+                    </div>
+                    <h2>chevron-right-black24, </h2>
+                </li>
+             <li title="chevron-right-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chevron-right-blue" class="svg-chevron-right-blue-dims" alt="chevron-right-blue">
+                    </div>
+                    <h2>chevron-right-blue, </h2>
+                </li>
+             <li title="chevron-right-grey">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chevron-right-grey" class="svg-chevron-right-grey-dims" alt="chevron-right-grey">
+                    </div>
+                    <h2>chevron-right-grey, </h2>
+                </li>
+             <li title="chevron-up-black16">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chevron-up-black16" class="svg-chevron-up-black16-dims" alt="chevron-up-black16">
+                    </div>
+                    <h2>chevron-up-black16, </h2>
+                </li>
+             <li title="chevron-up-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#chevron-up-blue" class="svg-chevron-up-blue-dims" alt="chevron-up-blue">
+                    </div>
+                    <h2>chevron-up-blue, </h2>
+                </li>
+             <li title="circle-success-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#circle-success-blue" class="svg-circle-success-blue-dims" alt="circle-success-blue">
+                    </div>
+                    <h2>circle-success-blue, </h2>
+                </li>
+             <li title="close">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#close" class="svg-close-dims" alt="close">
+                    </div>
+                    <h2>close, </h2>
+                </li>
+             <li title="comment">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#comment" class="svg-comment-dims" alt="comment">
+                    </div>
+                    <h2>comment, </h2>
+                </li>
+             <li title="delivery-big-car">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#delivery-big-car" class="svg-delivery-big-car-dims" alt="delivery-big-car">
+                    </div>
+                    <h2>delivery-big-car, </h2>
+                </li>
+             <li title="delivery-box-seam">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#delivery-box-seam" class="svg-delivery-box-seam-dims" alt="delivery-box-seam">
+                    </div>
+                    <h2>delivery-box-seam, </h2>
+                </li>
+             <li title="delivery-tabler-car">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#delivery-tabler-car" class="svg-delivery-tabler-car-dims" alt="delivery-tabler-car">
+                    </div>
+                    <h2>delivery-tabler-car, </h2>
+                </li>
+             <li title="delivery-tabler-run">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#delivery-tabler-run" class="svg-delivery-tabler-run-dims" alt="delivery-tabler-run">
+                    </div>
+                    <h2>delivery-tabler-run, </h2>
+                </li>
+             <li title="edit-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#edit-blue" class="svg-edit-blue-dims" alt="edit-blue">
+                    </div>
+                    <h2>edit-blue, </h2>
+                </li>
+             <li title="emai-bluel">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#emai-bluel" class="svg-emai-bluel-dims" alt="emai-bluel">
+                    </div>
+                    <h2>emai-bluel, </h2>
+                </li>
+             <li title="exit-red">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#exit-red" class="svg-exit-red-dims" alt="exit-red">
+                    </div>
+                    <h2>exit-red, </h2>
+                </li>
+             <li title="facebook">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#facebook" class="svg-facebook-dims" alt="facebook">
+                    </div>
+                    <h2>facebook, </h2>
+                </li>
+             <li title="filter-bookmark">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#filter-bookmark" class="svg-filter-bookmark-dims" alt="filter-bookmark">
+                    </div>
+                    <h2>filter-bookmark, </h2>
+                </li>
+             <li title="filter-equalizer">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#filter-equalizer" class="svg-filter-equalizer-dims" alt="filter-equalizer">
+                    </div>
+                    <h2>filter-equalizer, </h2>
+                </li>
+             <li title="filter-equalizer-horizont">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#filter-equalizer-horizont" class="svg-filter-equalizer-horizont-dims" alt="filter-equalizer-horizont">
+                    </div>
+                    <h2>filter-equalizer-horizont, </h2>
+                </li>
+             <li title="filter-reset">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#filter-reset" class="svg-filter-reset-dims" alt="filter-reset">
+                    </div>
+                    <h2>filter-reset, </h2>
+                </li>
+             <li title="format-line-spacing">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#format-line-spacing" class="svg-format-line-spacing-dims" alt="format-line-spacing">
+                    </div>
+                    <h2>format-line-spacing, </h2>
+                </li>
+             <li title="inst">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#inst" class="svg-inst-dims" alt="inst">
+                    </div>
+                    <h2>inst, </h2>
+                </li>
+             <li title="map">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#map" class="svg-map-dims" alt="map">
+                    </div>
+                    <h2>map, </h2>
+                </li>
+             <li title="map-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#map-blue" class="svg-map-blue-dims" alt="map-blue">
+                    </div>
+                    <h2>map-blue, </h2>
+                </li>
+             <li title="menu-login">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#menu-login" class="svg-menu-login-dims" alt="menu-login">
+                    </div>
+                    <h2>menu-login, </h2>
+                </li>
+             <li title="notification-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#notification-blue" class="svg-notification-blue-dims" alt="notification-blue">
+                    </div>
+                    <h2>notification-blue, </h2>
+                </li>
+             <li title="phone-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#phone-blue" class="svg-phone-blue-dims" alt="phone-blue">
+                    </div>
+                    <h2>phone-blue, </h2>
+                </li>
+             <li title="photo-add">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#photo-add" class="svg-photo-add-dims" alt="photo-add">
+                    </div>
+                    <h2>photo-add, </h2>
+                </li>
+             <li title="protect-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#protect-blue" class="svg-protect-blue-dims" alt="protect-blue">
+                    </div>
+                    <h2>protect-blue, </h2>
+                </li>
+             <li title="search-input-grey">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#search-input-grey" class="svg-search-input-grey-dims" alt="search-input-grey">
+                    </div>
+                    <h2>search-input-grey, </h2>
+                </li>
+             <li title="shopping-cart">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#shopping-cart" class="svg-shopping-cart-dims" alt="shopping-cart">
+                    </div>
+                    <h2>shopping-cart, </h2>
+                </li>
+             <li title="state1">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#state1" class="svg-state1-dims" alt="state1">
+                    </div>
+                    <h2>state1, </h2>
+                </li>
+             <li title="state2">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#state2" class="svg-state2-dims" alt="state2">
+                    </div>
+                    <h2>state2, </h2>
+                </li>
+             <li title="state3">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#state3" class="svg-state3-dims" alt="state3">
+                    </div>
+                    <h2>state3, </h2>
+                </li>
+             <li title="success-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#success-blue" class="svg-success-blue-dims" alt="success-blue">
+                    </div>
+                    <h2>success-blue, </h2>
+                </li>
+             <li title="sync-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#sync-blue" class="svg-sync-blue-dims" alt="sync-blue">
+                    </div>
+                    <h2>sync-blue, </h2>
+                </li>
+             <li title="telegram">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#telegram" class="svg-telegram-dims" alt="telegram">
+                    </div>
+                    <h2>telegram, </h2>
+                </li>
+             <li title="thumb-down">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#thumb-down" class="svg-thumb-down-dims" alt="thumb-down">
+                    </div>
+                    <h2>thumb-down, </h2>
+                </li>
+             <li title="thumb-up-green">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#thumb-up-green" class="svg-thumb-up-green-dims" alt="thumb-up-green">
+                    </div>
+                    <h2>thumb-up-green, </h2>
+                </li>
+             <li title="tips">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#tips" class="svg-tips-dims" alt="tips">
+                    </div>
+                    <h2>tips, </h2>
+                </li>
+             <li title="trophy-blue">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#trophy-blue" class="svg-trophy-blue-dims" alt="trophy-blue">
+                    </div>
+                    <h2>trophy-blue, </h2>
+                </li>
+             <li title="user">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#user" class="svg-user-dims" alt="user">
+                    </div>
+                    <h2>user, </h2>
+                </li>
+             <li title="vk">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#vk" class="svg-vk-dims" alt="vk">
+                    </div>
+                    <h2>vk, </h2>
+                </li>
+             <li title="warning">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#warning" class="svg-warning-dims" alt="warning">
+                    </div>
+                    <h2>warning, </h2>
+                </li>
+             <li title="warning-red">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#warning-red" class="svg-warning-red-dims" alt="warning-red">
+                    </div>
+                    <h2>warning-red, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Thu, 19 Oct 2023 04:05:56 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+/* Переменные */
+@import 'vars';
+/* Шрифты */
+@import 'fonts';
+/* Сброс */
+@import 'reset';
+/* Глобальные стили */
+@import 'global';
+
+@import '../../node_modules/swiper/swiper-bundle.min';
+
+//Основные
+@import './general/header.scss';
+@import './general/footer.scss';
+@import './general/breadcrumbs.scss';
+@import './general/pagination.scss';
+@import './general/modal.scss';
+
+//Страницы
+@import './pages/page-catalog.scss';
+@import './pages/page-product.scss';
+@import './pages/page-offer.scss';
+@import './pages/page-announcement.scss';
+
+//Блоки
+@import './block/block-first-screen.scss';
+@import './block/block-recommend.scss';
+@import './block/block-watched.scss';
+@import './block/block-advertising.scss';
+@import './block/block-widgets.scss';
+@import './block/block-product.scss';
+@import './block/block-description.scss';
+@import './block/block-quick-order.scss';
