@@ -112,11 +112,13 @@
     background-repeat: no-repeat;
     background-position: center left;
     padding-left: 36px;
+
     &:nth-child(1) {
-      background-image: url('../images/icons/sync-blue.svg');
+      background-image: url('../../images/icons/sync-blue.svg');
     }
+
     &:nth-child(2) {
-      background-image: url('../images/icons/protect-blue.svg');
+      background-image: url('../../images/icons/protect-blue.svg');
     }
   }
 
