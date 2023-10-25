@@ -12,221 +12,242 @@
 
     <div class="filter-m__item filter-m__item-category">
       <label class="filter__label label">
-        <span class="filter__label-name label-name">Все категории</span>
+        <span class="filter__label-name label-name filter-m__name">Все категории</span>
         <div class="filter__input-box input-box">
           <input class="filter__radio radio" type="radio" name="category" />
           <span class="filter__radio-marker radio-marker"></span>
         </div>
       </label>
-      <label class="filter__label label">
-        <span class="filter__label-name label-name">Оборудование</span>
-        <div class="filter__input-box input-box">
-          <input class="filter__radio radio" type="radio" name="category" />
-          <span class="filter__radio-marker radio-marker"></span>
+
+      <div class="filter-m__box-category">
+        <label class="filter__label label">
+          <span class="filter__label-name label-name">Оборудование</span>
+          <div class="filter__input-box input-box">
+            <input class="filter__radio radio" type="radio" name="category" />
+            <span class="filter__radio-marker radio-marker"></span>
+          </div>
+        </label>
+
+        <div class="filter-m__box-subcategory">
+          <label class="filter__label label">
+            <span class="filter__label-name label-name">Станки и оборудование</span>
+            <div class="filter__input-box input-box">
+              <input class="filter__radio radio" type="radio" name="category" />
+              <span class="filter__radio-marker radio-marker"></span>
+            </div>
+          </label>
+          <label class="filter__label label">
+            <span class="filter__label-name label-name">Пeчaтнoe oбopyдoвaниe</span>
+            <div class="filter__input-box input-box">
+              <input class="filter__radio radio" type="radio" name="category" />
+              <span class="filter__radio-marker radio-marker"></span>
+            </div>
+          </label>
+          <label class="filter__label label">
+            <span class="filter__label-name label-name">Aттpaкциoн</span>
+            <div class="filter__input-box input-box">
+              <input class="filter__radio radio" type="radio" name="category" />
+              <span class="filter__radio-marker radio-marker"></span>
+            </div>
+          </label>
+          <label class="filter__label label">
+            <span class="filter__label-name label-name">Элeктpooбopyдoвaниe</span>
+            <div class="filter__input-box input-box">
+              <input class="filter__radio radio" type="radio" name="category" />
+              <span class="filter__radio-marker radio-marker"></span>
+            </div>
+          </label>
         </div>
-      </label>
-      <label class="filter__label label">
-        <span class="filter__label-name label-name">Станки и оборудование</span>
-        <div class="filter__input-box input-box">
-          <input class="filter__radio radio" type="radio" name="category" />
-          <span class="filter__radio-marker radio-marker"></span>
-        </div>
-      </label>
-      <label class="filter__label label">
-        <span class="filter__label-name label-name">Пeчaтнoe oбopyдoвaниe</span>
-        <div class="filter__input-box input-box">
-          <input class="filter__radio radio" type="radio" name="category" />
-          <span class="filter__radio-marker radio-marker"></span>
-        </div>
-      </label>
-      <label class="filter__label label">
-        <span class="filter__label-name label-name">Aттpaкциoн</span>
-        <div class="filter__input-box input-box">
-          <input class="filter__radio radio" type="radio" name="category" />
-          <span class="filter__radio-marker radio-marker"></span>
-        </div>
-      </label>
-      <label class="filter__label label">
-        <span class="filter__label-name label-name">Любой</span>
-        <div class="filter__input-box input-box">
-          <input class="filter__radio radio" type="radio" name="category" />
-          <span class="filter__radio-marker radio-marker"></span>
-        </div>
-      </label>
-      <label class="filter__label label">
-        <span class="filter__label-name label-name">Элeктpooбopyдoвaниe</span>
-        <div class="filter__input-box input-box">
-          <input class="filter__radio radio" type="radio" name="category" />
-          <span class="filter__radio-marker radio-marker"></span>
-        </div>
-      </label>
+      </div>
 
       <button class="filter__btn-more">Все категории</button>
     </div>
 
     <div class="filter-m__item filter-m__item-range">
-      <div class="filter-m__title">Цена, ₽</div>
+      <div class="filter-m__subtitle is-active">Цена, ₽</div>
 
-      <div class="filter-m__price-box">
-        <label class="filter-m__price-label">
-          <span class="filter-m__price-elem">от</span>
-          <input class="filter-m__input" type="number" placeholder="0" id="rangeInput0" />
-        </label>
-        <label class="filter-m__price-label">
-          <span class="filter-m__price-elem">до</span>
-          <input class="filter-m__input" type="number" placeholder="4 007 527" id="rangeInput1" />
-        </label>
+      <div class="filter-m__item__inner active-content">
+        <div class="filter-m__price-box">
+          <label class="filter-m__price-label">
+            <span class="filter-m__price-elem">от</span>
+            <input class="filter-m__input" type="number" placeholder="0" id="rangeInput0" />
+          </label>
+          <label class="filter-m__price-label">
+            <span class="filter-m__price-elem">до</span>
+            <input class="filter-m__input" type="number" placeholder="4 007 527" id="rangeInput1" />
+          </label>
+        </div>
+
+        <div class="range-slider" id="range"></div>
       </div>
-
-      <div class="range-slider" id="range"></div>
     </div>
 
     <div class="filter-m__item filter__status">
-      <div class="filter__subtitle filter__subtitle-status">Состояние</div>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Новое</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Подержанное</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Сломанное</span>
-      </label>
+      <div class="filter-m__subtitle filter-m__subtitle-status is-active">
+        <span>Состояние</span>
+      </div>
+
+      <div class="filter-m__item__inner active-content">
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Новое</span>
+        </label>
+
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Подержанное</span>
+        </label>
+
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Сломанное</span>
+        </label>
+      </div>
     </div>
 
     <div class="filter-m__item filter__country">
-      <div class="filter__subtitle filter__subtitle-country">Страна-производитель</div>
-      <div class="input__box">
-        <input class="filter__input input" type="text" placeholder="до" />
-        <button class="input__search-btn"></button>
+      <div class="filter-m__subtitle filter-m__subtitle-country is-active">
+        <span>Страна-производитель</span>
       </div>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
+
+      <div class="filter-m__item__inner active-content">
+        <div class="input__box">
+          <input class="filter__input input" type="text" placeholder="до" />
+          <button class="input__search-btn"></button>
         </div>
-        <span class="filter__label-name label-name">Россия</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Китай</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Украина</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Германия</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Италия</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Перу</span>
-      </label>
-      <button class="filter__btn-more">Показать все</button>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Россия</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Китай</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Украина</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Германия</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Италия</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Перу</span>
+        </label>
+        <button class="filter__btn-more">Показать все</button>
+      </div>
     </div>
 
     <div class="filter-m__item filter__brend">
-      <div class="filter__subtitle filter__subtitle-country">Производитель / Бренд</div>
-      <div class="input__box">
-        <input class="filter__input input" type="text" placeholder="KMT" />
-        <button class="input__search-btn"></button>
+      <div class="filter-m__subtitle filter-m__subtitle-brend is-active">
+        <span>Производитель / Бренд</span>
       </div>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
+
+      <div class="filter-m__item__inner active-content">
+        <div class="input__box">
+          <input class="filter__input input" type="text" placeholder="KMT" />
+          <button class="input__search-btn"></button>
         </div>
-        <span class="filter__label-name label-name">KMT</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">SPECTR</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Pinnacle</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">DMTG</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">IRONMAC</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Chevalier</span>
-      </label>
-      <button class="filter__btn-more">Показать все</button>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">KMT</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">SPECTR</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Pinnacle</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">DMTG</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">IRONMAC</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Chevalier</span>
+        </label>
+        <button class="filter__btn-more">Показать все</button>
+      </div>
     </div>
 
     <div class="filter-m__item filter__availability">
-      <div class="filter__subtitle">Наличие</div>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">В наличии</span>
-      </label>
-      <label class="filter__label label">
-        <div class="filter__input-box input-box">
-          <input class="filter__checkbox checkbox" type="checkbox" />
-          <span class="filter__checkbox-marker checkbox-marker"></span>
-        </div>
-        <span class="filter__label-name label-name">Под заказ</span>
-      </label>
+      <div class="filter-m__subtitle is-active"><span>Наличие</span></div>
+
+      <div class="filter-m__item__inner active-content">
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">В наличии</span>
+        </label>
+        <label class="filter__label label">
+          <div class="filter__input-box input-box">
+            <input class="filter__checkbox checkbox" type="checkbox" />
+            <span class="filter__checkbox-marker checkbox-marker"></span>
+          </div>
+          <span class="filter__label-name label-name">Под заказ</span>
+        </label>
+      </div>
     </div>
 
-    <div class="filter__item filter__bottom">
+    <div class="filter-m__item filter__bottom">
       <button class="filter__btn-all filter__bottom-btn" type="button">Еще фильтры</button>
       <button class="filter__btn-save filter__bottom-btn" type="button">
         Сохранить условия поиска

@@ -1,5 +1,6 @@
 <div class="filter">
-    <div class="filter__title title">Фильтры</div>
+  <div class="filter__title title js-aside-title is-active">Фильтры</div>
+  <div class="filter__inner active-content">
     <form class="filter__form" action="#">
       <div class="filter__item filter__transfer">
         <div class="filter__subtitle">Форма передачи</div>
@@ -19,7 +20,7 @@
         <div class="filter__subtitle filter__subtitle-status">Состояние</div>
         <label class="filter__label label">
           <div class="filter__input-box input-box">
-            <input class="filter__checkbox checkbox" type="checkbox" />
+            <input class="filter__checkbox checkbox" type="checkbox" checked />
             <span class="filter__checkbox-marker checkbox-marker"></span>
           </div>
           <span class="filter__label-name label-name">Новое</span>
@@ -43,12 +44,12 @@
       <div class="filter__item filter__country">
         <div class="filter__subtitle filter__subtitle-country">Страна-производитель</div>
         <div class="input__box">
-          <input class="filter__input input" type="text" placeholder="до" />
+          <input class="filter__input input" type="text" placeholder="Россия" />
           <button class="input__search-btn"></button>
         </div>
         <label class="filter__label label">
           <div class="filter__input-box input-box">
-            <input class="filter__checkbox checkbox" type="checkbox" />
+            <input class="filter__checkbox checkbox" type="checkbox" checked />
             <span class="filter__checkbox-marker checkbox-marker"></span>
           </div>
           <span class="filter__label-name label-name">Россия</span>
@@ -99,7 +100,7 @@
         </div>
         <label class="filter__label label">
           <div class="filter__input-box input-box">
-            <input class="filter__checkbox checkbox" type="checkbox" />
+            <input class="filter__checkbox checkbox" type="checkbox" checked />
             <span class="filter__checkbox-marker checkbox-marker"></span>
           </div>
           <span class="filter__label-name label-name">KMT</span>
@@ -146,7 +147,7 @@
         <div class="filter__subtitle">Наличие</div>
         <label class="filter__label label">
           <div class="filter__input-box input-box">
-            <input class="filter__checkbox checkbox" type="checkbox" />
+            <input class="filter__checkbox checkbox" type="checkbox" checked />
             <span class="filter__checkbox-marker checkbox-marker"></span>
           </div>
           <span class="filter__label-name label-name">В наличии</span>
@@ -169,3 +170,4 @@
       </div>
     </form>
   </div>
+</div>
