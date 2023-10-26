@@ -15,6 +15,7 @@
 @import './general/breadcrumbs.scss';
 @import './general/pagination.scss';
 @import './general/modal.scss';
+@import './general/search.scss';
 
 //Страницы
 @import './pages/page-catalog.scss';
@@ -31,3 +32,5 @@
 @import './block/block-product.scss';
 @import './block/block-description.scss';
 @import './block/block-quick-order.scss';
+@import './block/block-sort.scss';
+@import './block/block-filter.scss';

@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* start - mobile filter */
-  const mobileFilter = document.querySelector('.filter-m');
+  /* const mobileFilter = document.querySelector('.filter-m');
   const mobileFilterBtn = document.querySelector('.sort__filter-name');
   const mobilePrevBtn = document.querySelector('.filter-m__top-btn');
 
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mobilePrevBtn.addEventListener('click', function () {
     mobileFilter.classList.remove('is-active');
-  });
+  }); */
   /* end - mobile filter */
 
   /* start - mobile menu */
@@ -265,12 +265,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }); */
 
   //show drop menu breadcrumbs
-  const dropBtn = document.querySelector('.breadcrumbs__item.drop-down');
+  /*   const dropBtn = document.querySelector('.breadcrumbs__item.drop-down');
   const dropMenu = dropBtn.querySelector('.drop-down__menu');
 
   dropBtn.addEventListener('click', function () {
     dropMenu.classList.toggle('is-active');
-  });
+  }); */
 
   //show phone btn
   /*   const showPhone = document.querySelector('.js-show-phone');
@@ -338,4 +338,38 @@ document.addEventListener('DOMContentLoaded', () => {
   accordeon('.js-footer-caption');
   accordeon('.filter-m__subtitle');
   // end - accordion
+
+  const searchBlock = document.querySelector('.search');
+  const searchInput = document.querySelector('.search__input');
+  const searchBtnClear = document.querySelector('.search__top-btn-delete');
+  const searchBtnPrev = document.querySelector('.search__top-btn');
+
+  searchBtnClear.style.display = 'none';
+
+  searchInput.addEventListener('input', getInputValue);
+  searchBtnClear.addEventListener('click', clearInputValue);
+  searchBtnPrev.addEventListener('click', function () {
+    searchBlock.classList.remove('is-active');
+  });
+
+  function clearInputValue() {
+    searchInput.value = '';
+  }
+
+  function getInputValue() {
+    const val = searchInput.value;
+    if (val.length) {
+      searchBtnClear.style.display = 'block';
+    }
+  }
+
+  const sortDropdownMenu = document.querySelector('.sort__dropdown');
+  const offerSortBtn = document.querySelectorAll('.offer__sort-btn1');
+
+  console.log(sortDropdownMenu);
+  console.log(offerSortBtn);
+
+  /* offerSortBtn.addEventListener('click', function () {
+    sortDropdownMenu.classList.add('is-active');
+  }); */
 });

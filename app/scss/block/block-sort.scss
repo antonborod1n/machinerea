@@ -1,0 +1,181 @@
+.sort {
+  @media (max-width: 768px) {
+    order: 3;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__box-item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__box-grid {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__btn-grid {
+    @extend %btn-r;
+  }
+
+  &__btn {
+    @extend %btn-r;
+    color: $text;
+
+    &.is-active {
+      color: $gray;
+    }
+  }
+
+  &__btn-change {
+    @extend %sourcesans-600;
+    color: $text;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__selected {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 17px 36px;
+    border-radius: 5px;
+    border: 1px solid $accent;
+    background-color: #ffffff;
+  }
+
+  &__selected-name {
+    color: $accent;
+  }
+
+  &__selected-del {
+    @extend %btn-r;
+  }
+
+  &__selected-clear {
+    display: flex;
+    align-items: center;
+    padding: 17px 36px;
+    border-radius: 5px;
+    color: $red;
+    border: 1px solid $red;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  &__name {
+    display: none;
+    @extend %sourcesans-600;
+
+    @media (max-width: 768px) {
+      position: relative;
+      display: block;
+      font-size: 16px;
+      line-height: 26px;
+      padding-left: 24px;
+    }
+  }
+
+  &__filter-name {
+    background-image: url('../images/icons/filter-equalizer-horizont.svg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 18px;
+
+    @media (max-width: 768px) {
+      background-size: 14px;
+    }
+  }
+
+  &__dropdown {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      position: relative;
+      display: block;
+    }
+
+    &-name {
+      background-image: url('../images/icons/format-line-spacing.svg');
+      background-repeat: no-repeat;
+      background-position: center left;
+      background-size: 18px;
+
+      @media (max-width: 768px) {
+        background-size: 14px;
+      }
+    }
+
+    &-menu {
+      @media (max-width: 768px) {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        z-index: 10;
+        padding: 8px;
+        width: 120px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        display: none; // убрать
+      }
+    }
+
+    &-btn {
+      @extend %btn-r;
+      font-size: 12px;
+      line-height: 18px;
+
+      &.is-active {
+        color: $text;
+
+        &:after {
+          content: url('../images/icons/check-smal.svg');
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
