@@ -6252,6 +6252,47 @@
     <div class="overlay"></div>
     
     <main class="main offer-page">
+      <div class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#"> Оборудование </a>
+            </li>
+            <li class="breadcrumbs__item drop-down">
+              <a class="breadcrumbs__link" href="#"> Станки и оборудование (<span>1378</span>) </a>
+              <div class="drop-down__menu">
+                <ul class="drop-down__list">
+                  <li class="drop-down__item">
+                    <a class="drop-down__link" href="#"> Станки и оборудование (<span>1378</span>) </a>
+                  </li>
+                  <li class="drop-down__item">
+                    <a class="drop-down__link" href="#">Производственные линии (<span>134</span>)</a>
+                  </li>
+                  <li class="drop-down__item">
+                    <a class="drop-down__link" href="#">Машины и техника (<span>117</span>)</a>
+                  </li>
+                  <li class="drop-down__item">
+                    <a class="drop-down__link" href="#">Мебель (<span>117</span>)</a>
+                  </li>
+                  <li class="drop-down__item">
+                    <a class="drop-down__link" href="#">Запчасти (<span>18</span>)</a>
+                  </li>
+                  <li class="drop-down__item">
+                    <a class="drop-down__link" href="#">Рекламные стенды (<span>14</span>)</a>
+                  </li>
+                  <li class="drop-down__item">
+                    <a class="drop-down__link" href="#">Пресс-формы (<span>14</span>)</a>
+                  </li>
+                  <li class="drop-down__item">
+                    <a class="drop-down__link" href="#">Бетонные заводы (<span>10</span>)</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
       <section class="top-offer">
         <div class="container">
           <div class="top-offer__inner">
@@ -6326,6 +6367,16 @@
         </div>
       </section>
       
+      <div class="offer__info">
+        <div class="container">
+          <h1 class="offer__info-title title">Предложения продавцов</h1>
+          <p class="offer__info-text">
+            Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев
+            более менее осмысленного текста рыбы на русском языке.
+          </p>
+        </div>
+      </div>
+      
       <div class="container">
         <div class="wrapper">
           <div class="top">
@@ -6375,8 +6426,10 @@
                       />
                     </picture>
                   </div>
-                  <div class="offer__product-box1">
-                    <div class="tag tag-new">Новый</div>
+                  <div class="offer__product-box">
+                    <div class="offer__product-tags-box">
+                      <div class="tag tag-new">Новый</div>
+                    </div>
                     <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
                     <div class="offer__product-state">
                       <img
@@ -6394,7 +6447,12 @@
                     <div class="availability__box">
                       <span class="availability__name">В наличии</span>
                       <div class="availability__are tip--green tip-box">
-                        <img src="./images/icons/thumb-up-green.svg" width="20" height="20" />
+                        <img
+                          class="availability__icon"
+                          src="./images/icons/thumb-up-green.svg"
+                          width="20"
+                          height="20"
+                        />
                         <div class="tip-popup">
                           <div class="tip-name">Гарантируем наличие</div>
                         </div>
@@ -6407,7 +6465,7 @@
                   </div>
             
                   <div class="offer__product-info">
-                    <ul class="offer__product-list offer__product-list-info">
+                    <ul class="offer__product-list">
                       <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
                       <li class="offer__product-item">
                         <img
@@ -6432,9 +6490,10 @@
                       </li>
                     </ul>
             
-                    <ul class="offer__product-list">
+                    <ul class="offer__product-list offer__product-list-info">
                       <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-                      <li class="offer__product-item">231 отзыв</li>
+                      <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+                      <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
                       <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
                     </ul>
                   </div>
@@ -6477,9 +6536,10 @@
             
                   <div class="offer__product-cart">
                     <button class="offer__product-btn">Добавить в корзину</button>
-                    <button class="offer__product-btn-more">Добавить в корзину</button>
                   </div>
                 </div>
+            
+                <h1 class="offer__title">Другие продавцы</h1>
             
                 <div class="offer__product">
                   <div class="offer__product-img-box">
@@ -6495,8 +6555,10 @@
                       />
                     </picture>
                   </div>
-                  <div class="offer__product-box1">
-                    <div class="tag tag-new">Новый</div>
+                  <div class="offer__product-box">
+                    <div class="offer__product-tags-box">
+                      <div class="tag tag-new">Новый</div>
+                    </div>
                     <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
                     <div class="offer__product-state">
                       <img
@@ -6514,20 +6576,21 @@
                     <div class="availability__box">
                       <span class="availability__name">В наличии</span>
                       <div class="availability__are tip--green tip-box">
-                        <img src="./images/icons/thumb-up-green.svg" width="20" height="20" />
+                        <img
+                          class="availability__icon"
+                          src="./images/icons/thumb-up-green.svg"
+                          width="20"
+                          height="20"
+                        />
                         <div class="tip-popup">
                           <div class="tip-name">Гарантируем наличие</div>
                         </div>
                       </div>
                     </div>
-                    <ul class="availability__list">
-                      <li class="availability__item">Розница</li>
-                      <li class="availability__item">Собственник</li>
-                    </ul>
                   </div>
             
                   <div class="offer__product-info">
-                    <ul class="offer__product-list offer__product-list-info">
+                    <ul class="offer__product-list">
                       <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
                       <li class="offer__product-item">
                         <img
@@ -6552,9 +6615,10 @@
                       </li>
                     </ul>
             
-                    <ul class="offer__product-list">
+                    <ul class="offer__product-list offer__product-list-info">
                       <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-                      <li class="offer__product-item">231 отзыв</li>
+                      <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+                      <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
                       <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
                     </ul>
                   </div>
@@ -6571,15 +6635,22 @@
                   </div>
             
                   <div class="offer__product-delivery">
-                    <h3 class="offer__product-delivery-title">Доставка продавца</h3>
-                    <p class="offer__product-delivery-desc">
-                      Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                    <p class="offer__product-delivery-text">
+                      Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев
+                      более менее
                     </p>
-            
-                    <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
-                    <p class="offer__product-delivery-desc">
-                      Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-                    </p>
+                    <div class="offer__product-delivery-box">
+                      <h3 class="offer__product-delivery-title">Доставка продавца</h3>
+                      <p class="offer__product-delivery-desc">
+                        Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                      </p>
+                    </div>
+                    <div class="offer__product-delivery-box">
+                      <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
+                      <p class="offer__product-delivery-desc">
+                        Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                      </p>
+                    </div>
                   </div>
             
                   <div class="offer__product-price">
@@ -6595,7 +6666,6 @@
             
                   <div class="offer__product-cart">
                     <button class="offer__product-btn">Добавить в корзину</button>
-                    <button class="offer__product-btn-more">Добавить в корзину</button>
                   </div>
                 </div>
             
@@ -6613,8 +6683,10 @@
                       />
                     </picture>
                   </div>
-                  <div class="offer__product-box1">
-                    <div class="tag tag-new">Новый</div>
+                  <div class="offer__product-box">
+                    <div class="offer__product-tags-box">
+                      <div class="tag tag-new">Новый</div>
+                    </div>
                     <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
                     <div class="offer__product-state">
                       <img
@@ -6632,7 +6704,12 @@
                     <div class="availability__box">
                       <span class="availability__name">В наличии</span>
                       <div class="availability__are tip--green tip-box">
-                        <img src="./images/icons/thumb-up-green.svg" width="20" height="20" />
+                        <img
+                          class="availability__icon"
+                          src="./images/icons/thumb-up-green.svg"
+                          width="20"
+                          height="20"
+                        />
                         <div class="tip-popup">
                           <div class="tip-name">Гарантируем наличие</div>
                         </div>
@@ -6645,7 +6722,7 @@
                   </div>
             
                   <div class="offer__product-info">
-                    <ul class="offer__product-list offer__product-list-info">
+                    <ul class="offer__product-list">
                       <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
                       <li class="offer__product-item">
                         <img
@@ -6670,9 +6747,10 @@
                       </li>
                     </ul>
             
-                    <ul class="offer__product-list">
+                    <ul class="offer__product-list offer__product-list-info">
                       <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-                      <li class="offer__product-item">231 отзыв</li>
+                      <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+                      <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
                       <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
                     </ul>
                   </div>
@@ -6689,15 +6767,18 @@
                   </div>
             
                   <div class="offer__product-delivery">
-                    <h3 class="offer__product-delivery-title">Доставка продавца</h3>
-                    <p class="offer__product-delivery-desc">
-                      Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-                    </p>
-            
-                    <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
-                    <p class="offer__product-delivery-desc">
-                      Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-                    </p>
+                    <div class="offer__product-delivery-box">
+                      <h3 class="offer__product-delivery-title">Доставка продавца</h3>
+                      <p class="offer__product-delivery-desc">
+                        Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                      </p>
+                    </div>
+                    <div class="offer__product-delivery-box">
+                      <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
+                      <p class="offer__product-delivery-desc">
+                        Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                      </p>
+                    </div>
                   </div>
             
                   <div class="offer__product-price">
@@ -6725,7 +6806,6 @@
             
                   <div class="offer__product-cart">
                     <button class="offer__product-btn">Добавить в корзину</button>
-                    <button class="offer__product-btn-more">Добавить в корзину</button>
                   </div>
                 </div>
             
@@ -6743,9 +6823,12 @@
                       />
                     </picture>
                   </div>
-                  <div class="offer__product-box1">
-                    <div class="tag tag-used">Поддержанный</div>
-                    <div class="tag tag-restored">восстановленный</div>
+                  <div class="offer__product-box">
+                    <div class="offer__product-tags-box">
+                      <div class="tag tag-used">Поддержанный</div>
+                      <div class="tag tag-restored">восстановленный</div>
+                    </div>
+            
                     <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
                     <div class="offer__product-state">
                       <img
@@ -6763,7 +6846,12 @@
                     <div class="availability__box">
                       <span class="availability__name">В наличии</span>
                       <div class="availability__are">
-                        <img src="./images/icons/thumb-down.svg" width="20" height="20" />
+                        <img
+                          class="availability__icon"
+                          src="./images/icons/thumb-down.svg"
+                          width="20"
+                          height="20"
+                        />
                       </div>
                     </div>
                     <p class="availability__text">
@@ -6773,7 +6861,7 @@
                   </div>
             
                   <div class="offer__product-info">
-                    <ul class="offer__product-list offer__product-list-info">
+                    <ul class="offer__product-list">
                       <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
                       <li class="offer__product-item">
                         <img
@@ -6798,9 +6886,10 @@
                       </li>
                     </ul>
             
-                    <ul class="offer__product-list">
+                    <ul class="offer__product-list offer__product-list-info">
                       <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-                      <li class="offer__product-item">231 отзыв</li>
+                      <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+                      <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
                       <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
                     </ul>
                   </div>
@@ -6817,15 +6906,18 @@
                   </div>
             
                   <div class="offer__product-delivery">
-                    <h3 class="offer__product-delivery-title">Доставка продавца</h3>
-                    <p class="offer__product-delivery-desc">
-                      Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-                    </p>
-            
-                    <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
-                    <p class="offer__product-delivery-desc">
-                      Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-                    </p>
+                    <div class="offer__product-delivery-box">
+                      <h3 class="offer__product-delivery-title">Доставка продавца</h3>
+                      <p class="offer__product-delivery-desc">
+                        Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                      </p>
+                    </div>
+                    <div class="offer__product-delivery-box">
+                      <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
+                      <p class="offer__product-delivery-desc">
+                        Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                      </p>
+                    </div>
                   </div>
             
                   <div class="offer__product-price">
@@ -6840,8 +6932,7 @@
                   </div>
             
                   <div class="offer__product-cart">
-                    <button class="offer__product-btn-details">Подробнее</button>
-                    <button class="offer__product-btn-more">Добавить в корзину</button>
+                    <button class="offer__product-btn-more">Подробнее</button>
                   </div>
                 </div>
             
@@ -6859,8 +6950,11 @@
                       />
                     </picture>
                   </div>
-                  <div class="offer__product-box1">
-                    <div class="tag tag-new">Новый</div>
+                  <div class="offer__product-box">
+                    <div class="offer__product-tags-box">
+                      <div class="tag tag-new">Новый</div>
+                    </div>
+            
                     <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
                     <div class="offer__product-state">
                       <img
@@ -6878,7 +6972,13 @@
                     <div class="availability__box">
                       <span class="availability__name">В наличии</span>
                       <div class="availability__are tip--green tip-box">
-                        <img src="./images/icons/thumb-up-green.svg" width="20" height="20" />
+                        <img
+                          class="availability__icon"
+                          class="availability__icon"
+                          src="./images/icons/thumb-up-green.svg"
+                          width="20"
+                          height="20"
+                        />
                         <div class="tip-popup">
                           <div class="tip-name">Гарантируем наличие</div>
                         </div>
@@ -6891,7 +6991,7 @@
                   </div>
             
                   <div class="offer__product-info">
-                    <ul class="offer__product-list offer__product-list-info">
+                    <ul class="offer__product-list">
                       <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
                       <li class="offer__product-item">
                         <img
@@ -6916,9 +7016,10 @@
                       </li>
                     </ul>
             
-                    <ul class="offer__product-list">
+                    <ul class="offer__product-list offer__product-list-info">
                       <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-                      <li class="offer__product-item">231 отзыв</li>
+                      <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+                      <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
                       <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
                     </ul>
                   </div>
@@ -6935,15 +7036,18 @@
                   </div>
             
                   <div class="offer__product-delivery">
-                    <h3 class="offer__product-delivery-title">Доставка продавца</h3>
-                    <p class="offer__product-delivery-desc">
-                      Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-                    </p>
-            
-                    <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
-                    <p class="offer__product-delivery-desc">
-                      Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-                    </p>
+                    <div class="offer__product-delivery-box">
+                      <h3 class="offer__product-delivery-title">Доставка продавца</h3>
+                      <p class="offer__product-delivery-desc">
+                        Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                      </p>
+                    </div>
+                    <div class="offer__product-delivery-box">
+                      <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
+                      <p class="offer__product-delivery-desc">
+                        Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                      </p>
+                    </div>
                   </div>
             
                   <div class="offer__product-price">
@@ -6959,7 +7063,6 @@
             
                   <div class="offer__product-cart">
                     <button class="offer__product-btn">Добавить в корзину</button>
-                    <button class="offer__product-btn-more">Добавить в корзину</button>
                   </div>
                 </div>
             
@@ -6977,8 +7080,10 @@
                       />
                     </picture>
                   </div>
-                  <div class="offer__product-box1">
-                    <div class="tag tag-new">Новый</div>
+                  <div class="offer__product-box">
+                    <div class="offer__product-tags-box">
+                      <div class="tag tag-new">Новый</div>
+                    </div>
                     <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
                     <div class="offer__product-state">
                       <img
@@ -6996,7 +7101,12 @@
                     <div class="availability__box">
                       <span class="availability__name">В наличии</span>
                       <div class="availability__are tip--green tip-box">
-                        <img src="./images/icons/thumb-up-green.svg" width="20" height="20" />
+                        <img
+                          class="availability__icon"
+                          src="./images/icons/thumb-up-green.svg"
+                          width="20"
+                          height="20"
+                        />
                         <div class="tip-popup">
                           <div class="tip-name">Гарантируем наличие</div>
                         </div>
@@ -7009,7 +7119,7 @@
                   </div>
             
                   <div class="offer__product-info">
-                    <ul class="offer__product-list offer__product-list-info">
+                    <ul class="offer__product-list">
                       <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
                       <li class="offer__product-item">
                         <img
@@ -7034,9 +7144,10 @@
                       </li>
                     </ul>
             
-                    <ul class="offer__product-list">
+                    <ul class="offer__product-list offer__product-list-info">
                       <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-                      <li class="offer__product-item">231 отзыв</li>
+                      <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+                      <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
                       <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
                     </ul>
                   </div>
@@ -7053,15 +7164,18 @@
                   </div>
             
                   <div class="offer__product-delivery">
-                    <h3 class="offer__product-delivery-title">Доставка продавца</h3>
-                    <p class="offer__product-delivery-desc">
-                      Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-                    </p>
-            
-                    <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
-                    <p class="offer__product-delivery-desc">
-                      Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-                    </p>
+                    <div class="offer__product-delivery-box">
+                      <h3 class="offer__product-delivery-title">Доставка продавца</h3>
+                      <p class="offer__product-delivery-desc">
+                        Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                      </p>
+                    </div>
+                    <div class="offer__product-delivery-box">
+                      <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
+                      <p class="offer__product-delivery-desc">
+                        Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+                      </p>
+                    </div>
                   </div>
             
                   <div class="offer__product-price">
@@ -7077,7 +7191,6 @@
             
                   <div class="offer__product-cart">
                     <button class="offer__product-btn">Добавить в корзину</button>
-                    <button class="offer__product-btn-more">Добавить в корзину</button>
                   </div>
                 </div>
               </div>
@@ -7088,906 +7201,6 @@
               <div class="advertising__item">Реклама</div>
               <div class="advertising__item">Реклама</div>
             </div>
-            
-            <section class="watched">
-              <h2 class="watched-title title">Раннее вы смотрели</h2>
-              <div class="watched__wrapper">
-                <div class="swiper-product">
-                  <div class="swiper-wrapper watched__box">
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="watched__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="watched__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">Cплит-cиcтeмa Rivacold</h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="watched__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028</h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="watched__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="watched__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="watched__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="watched__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="watched__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="watched__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="watched__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper__btns-box">
-                    <!-- <div class="swiper-button swiper-button-prev"></div> -->
-                    <div class="swiper-button swiper-button-next"></div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            
-            <section class="recommend">
-              <h2 class="recommend-title title">Рекомендуем</h2>
-              <div class="recommend__wrapper">
-                <div class="swiper-product">
-                  <div class="swiper-wrapper recommend__box">
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="recommend__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="recommend__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="recommend__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028</h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="recommend__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="recommend__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="recommend__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="recommend__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="recommend__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="recommend__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide product-vertical">
-                      <div class="product__inner">
-                        <div class="col product__column">
-                          <div class="tags">
-                            <div class="tag tag-new">Новый</div>
-                          </div>
-                          <a class="product__link" href="#">
-                            <picture class="recommend__picture">
-                              <source srcset="./images/content/conditioner.webp" type="image/webp" />
-                              <source srcset="./images/content/conditioner.avif" type="image/avif" />
-                              <img
-                                class="product__img"
-                                src="./images/content/conditioner.png"
-                                alt="Кондиционер"
-                              />
-                            </picture>
-                          </a>
-                        </div>
-                        <div class="col">
-                          <div class="product__holder">
-                            <a class="product__link" href="#">
-                              <h2 class="product__subtitle">
-                                Cплит-cиcтeмa Rivacold WSH028 Z001 WSH028 Z001 WSH028 Z001
-                              </h2>
-                            </a>
-                            <div class="product__box">
-                              <div class="product__info">
-                                <div class="rating">5.0</div>
-                                <div class="reviews">
-                                  <span>800</span>
-                                  отзывов
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="price">
-                            <ins class="price-new">5 000 ₽</ins>
-                            <del class="price-old">10 000 ₽</del>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper__btns-box">
-                    <!-- <div class="swiper-button swiper-button-prev"></div> -->
-                    <div class="swiper-button swiper-button-next"></div>
-                  </div>
-                </div>
-              </div>
-            </section>
             
             <section class="bottom">
               <p class="bottom__info">

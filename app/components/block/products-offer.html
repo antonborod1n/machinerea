@@ -14,8 +14,10 @@
           />
         </picture>
       </div>
-      <div class="offer__product-box1">
-        <div class="tag tag-new">Новый</div>
+      <div class="offer__product-box">
+        <div class="offer__product-tags-box">
+          <div class="tag tag-new">Новый</div>
+        </div>
         <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
         <div class="offer__product-state">
           <img
@@ -33,7 +35,12 @@
         <div class="availability__box">
           <span class="availability__name">В наличии</span>
           <div class="availability__are tip--green tip-box">
-            <img src="./images/icons/thumb-up-green.svg" width="20" height="20" />
+            <img
+              class="availability__icon"
+              src="./images/icons/thumb-up-green.svg"
+              width="20"
+              height="20"
+            />
             <div class="tip-popup">
               <div class="tip-name">Гарантируем наличие</div>
             </div>
@@ -46,7 +53,7 @@
       </div>
 
       <div class="offer__product-info">
-        <ul class="offer__product-list offer__product-list-info">
+        <ul class="offer__product-list">
           <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
           <li class="offer__product-item">
             <img
@@ -71,9 +78,10 @@
           </li>
         </ul>
 
-        <ul class="offer__product-list">
+        <ul class="offer__product-list offer__product-list-info">
           <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-          <li class="offer__product-item">231 отзыв</li>
+          <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+          <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
           <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
         </ul>
       </div>
@@ -116,9 +124,10 @@
 
       <div class="offer__product-cart">
         <button class="offer__product-btn">Добавить в корзину</button>
-        <button class="offer__product-btn-more">Добавить в корзину</button>
       </div>
     </div>
+
+    <h1 class="offer__title">Другие продавцы</h1>
 
     <div class="offer__product">
       <div class="offer__product-img-box">
@@ -134,8 +143,10 @@
           />
         </picture>
       </div>
-      <div class="offer__product-box1">
-        <div class="tag tag-new">Новый</div>
+      <div class="offer__product-box">
+        <div class="offer__product-tags-box">
+          <div class="tag tag-new">Новый</div>
+        </div>
         <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
         <div class="offer__product-state">
           <img
@@ -153,20 +164,21 @@
         <div class="availability__box">
           <span class="availability__name">В наличии</span>
           <div class="availability__are tip--green tip-box">
-            <img src="./images/icons/thumb-up-green.svg" width="20" height="20" />
+            <img
+              class="availability__icon"
+              src="./images/icons/thumb-up-green.svg"
+              width="20"
+              height="20"
+            />
             <div class="tip-popup">
               <div class="tip-name">Гарантируем наличие</div>
             </div>
           </div>
         </div>
-        <ul class="availability__list">
-          <li class="availability__item">Розница</li>
-          <li class="availability__item">Собственник</li>
-        </ul>
       </div>
 
       <div class="offer__product-info">
-        <ul class="offer__product-list offer__product-list-info">
+        <ul class="offer__product-list">
           <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
           <li class="offer__product-item">
             <img
@@ -191,9 +203,10 @@
           </li>
         </ul>
 
-        <ul class="offer__product-list">
+        <ul class="offer__product-list offer__product-list-info">
           <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-          <li class="offer__product-item">231 отзыв</li>
+          <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+          <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
           <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
         </ul>
       </div>
@@ -210,15 +223,22 @@
       </div>
 
       <div class="offer__product-delivery">
-        <h3 class="offer__product-delivery-title">Доставка продавца</h3>
-        <p class="offer__product-delivery-desc">
-          Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+        <p class="offer__product-delivery-text">
+          Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев
+          более менее
         </p>
-
-        <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
-        <p class="offer__product-delivery-desc">
-          Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-        </p>
+        <div class="offer__product-delivery-box">
+          <h3 class="offer__product-delivery-title">Доставка продавца</h3>
+          <p class="offer__product-delivery-desc">
+            Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+          </p>
+        </div>
+        <div class="offer__product-delivery-box">
+          <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
+          <p class="offer__product-delivery-desc">
+            Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+          </p>
+        </div>
       </div>
 
       <div class="offer__product-price">
@@ -234,7 +254,6 @@
 
       <div class="offer__product-cart">
         <button class="offer__product-btn">Добавить в корзину</button>
-        <button class="offer__product-btn-more">Добавить в корзину</button>
       </div>
     </div>
 
@@ -252,8 +271,10 @@
           />
         </picture>
       </div>
-      <div class="offer__product-box1">
-        <div class="tag tag-new">Новый</div>
+      <div class="offer__product-box">
+        <div class="offer__product-tags-box">
+          <div class="tag tag-new">Новый</div>
+        </div>
         <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
         <div class="offer__product-state">
           <img
@@ -271,7 +292,12 @@
         <div class="availability__box">
           <span class="availability__name">В наличии</span>
           <div class="availability__are tip--green tip-box">
-            <img src="./images/icons/thumb-up-green.svg" width="20" height="20" />
+            <img
+              class="availability__icon"
+              src="./images/icons/thumb-up-green.svg"
+              width="20"
+              height="20"
+            />
             <div class="tip-popup">
               <div class="tip-name">Гарантируем наличие</div>
             </div>
@@ -284,7 +310,7 @@
       </div>
 
       <div class="offer__product-info">
-        <ul class="offer__product-list offer__product-list-info">
+        <ul class="offer__product-list">
           <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
           <li class="offer__product-item">
             <img
@@ -309,9 +335,10 @@
           </li>
         </ul>
 
-        <ul class="offer__product-list">
+        <ul class="offer__product-list offer__product-list-info">
           <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-          <li class="offer__product-item">231 отзыв</li>
+          <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+          <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
           <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
         </ul>
       </div>
@@ -328,15 +355,18 @@
       </div>
 
       <div class="offer__product-delivery">
-        <h3 class="offer__product-delivery-title">Доставка продавца</h3>
-        <p class="offer__product-delivery-desc">
-          Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-        </p>
-
-        <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
-        <p class="offer__product-delivery-desc">
-          Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-        </p>
+        <div class="offer__product-delivery-box">
+          <h3 class="offer__product-delivery-title">Доставка продавца</h3>
+          <p class="offer__product-delivery-desc">
+            Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+          </p>
+        </div>
+        <div class="offer__product-delivery-box">
+          <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
+          <p class="offer__product-delivery-desc">
+            Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+          </p>
+        </div>
       </div>
 
       <div class="offer__product-price">
@@ -364,7 +394,6 @@
 
       <div class="offer__product-cart">
         <button class="offer__product-btn">Добавить в корзину</button>
-        <button class="offer__product-btn-more">Добавить в корзину</button>
       </div>
     </div>
 
@@ -382,9 +411,12 @@
           />
         </picture>
       </div>
-      <div class="offer__product-box1">
-        <div class="tag tag-used">Поддержанный</div>
-        <div class="tag tag-restored">восстановленный</div>
+      <div class="offer__product-box">
+        <div class="offer__product-tags-box">
+          <div class="tag tag-used">Поддержанный</div>
+          <div class="tag tag-restored">восстановленный</div>
+        </div>
+
         <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
         <div class="offer__product-state">
           <img
@@ -402,7 +434,12 @@
         <div class="availability__box">
           <span class="availability__name">В наличии</span>
           <div class="availability__are">
-            <img src="./images/icons/thumb-down.svg" width="20" height="20" />
+            <img
+              class="availability__icon"
+              src="./images/icons/thumb-down.svg"
+              width="20"
+              height="20"
+            />
           </div>
         </div>
         <p class="availability__text">
@@ -412,7 +449,7 @@
       </div>
 
       <div class="offer__product-info">
-        <ul class="offer__product-list offer__product-list-info">
+        <ul class="offer__product-list">
           <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
           <li class="offer__product-item">
             <img
@@ -437,9 +474,10 @@
           </li>
         </ul>
 
-        <ul class="offer__product-list">
+        <ul class="offer__product-list offer__product-list-info">
           <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-          <li class="offer__product-item">231 отзыв</li>
+          <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+          <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
           <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
         </ul>
       </div>
@@ -456,15 +494,18 @@
       </div>
 
       <div class="offer__product-delivery">
-        <h3 class="offer__product-delivery-title">Доставка продавца</h3>
-        <p class="offer__product-delivery-desc">
-          Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-        </p>
-
-        <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
-        <p class="offer__product-delivery-desc">
-          Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-        </p>
+        <div class="offer__product-delivery-box">
+          <h3 class="offer__product-delivery-title">Доставка продавца</h3>
+          <p class="offer__product-delivery-desc">
+            Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+          </p>
+        </div>
+        <div class="offer__product-delivery-box">
+          <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
+          <p class="offer__product-delivery-desc">
+            Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+          </p>
+        </div>
       </div>
 
       <div class="offer__product-price">
@@ -479,8 +520,7 @@
       </div>
 
       <div class="offer__product-cart">
-        <button class="offer__product-btn-details">Подробнее</button>
-        <button class="offer__product-btn-more">Добавить в корзину</button>
+        <button class="offer__product-btn-more">Подробнее</button>
       </div>
     </div>
 
@@ -498,8 +538,11 @@
           />
         </picture>
       </div>
-      <div class="offer__product-box1">
-        <div class="tag tag-new">Новый</div>
+      <div class="offer__product-box">
+        <div class="offer__product-tags-box">
+          <div class="tag tag-new">Новый</div>
+        </div>
+
         <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
         <div class="offer__product-state">
           <img
@@ -517,7 +560,13 @@
         <div class="availability__box">
           <span class="availability__name">В наличии</span>
           <div class="availability__are tip--green tip-box">
-            <img src="./images/icons/thumb-up-green.svg" width="20" height="20" />
+            <img
+              class="availability__icon"
+              class="availability__icon"
+              src="./images/icons/thumb-up-green.svg"
+              width="20"
+              height="20"
+            />
             <div class="tip-popup">
               <div class="tip-name">Гарантируем наличие</div>
             </div>
@@ -530,7 +579,7 @@
       </div>
 
       <div class="offer__product-info">
-        <ul class="offer__product-list offer__product-list-info">
+        <ul class="offer__product-list">
           <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
           <li class="offer__product-item">
             <img
@@ -555,9 +604,10 @@
           </li>
         </ul>
 
-        <ul class="offer__product-list">
+        <ul class="offer__product-list offer__product-list-info">
           <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-          <li class="offer__product-item">231 отзыв</li>
+          <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+          <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
           <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
         </ul>
       </div>
@@ -574,15 +624,18 @@
       </div>
 
       <div class="offer__product-delivery">
-        <h3 class="offer__product-delivery-title">Доставка продавца</h3>
-        <p class="offer__product-delivery-desc">
-          Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-        </p>
-
-        <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
-        <p class="offer__product-delivery-desc">
-          Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-        </p>
+        <div class="offer__product-delivery-box">
+          <h3 class="offer__product-delivery-title">Доставка продавца</h3>
+          <p class="offer__product-delivery-desc">
+            Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+          </p>
+        </div>
+        <div class="offer__product-delivery-box">
+          <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
+          <p class="offer__product-delivery-desc">
+            Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+          </p>
+        </div>
       </div>
 
       <div class="offer__product-price">
@@ -598,7 +651,6 @@
 
       <div class="offer__product-cart">
         <button class="offer__product-btn">Добавить в корзину</button>
-        <button class="offer__product-btn-more">Добавить в корзину</button>
       </div>
     </div>
 
@@ -616,8 +668,10 @@
           />
         </picture>
       </div>
-      <div class="offer__product-box1">
-        <div class="tag tag-new">Новый</div>
+      <div class="offer__product-box">
+        <div class="offer__product-tags-box">
+          <div class="tag tag-new">Новый</div>
+        </div>
         <h2 class="offer__product-title">Cплит-cиcтeмa Rivacold WSH028 Z001</h2>
         <div class="offer__product-state">
           <img
@@ -635,7 +689,12 @@
         <div class="availability__box">
           <span class="availability__name">В наличии</span>
           <div class="availability__are tip--green tip-box">
-            <img src="./images/icons/thumb-up-green.svg" width="20" height="20" />
+            <img
+              class="availability__icon"
+              src="./images/icons/thumb-up-green.svg"
+              width="20"
+              height="20"
+            />
             <div class="tip-popup">
               <div class="tip-name">Гарантируем наличие</div>
             </div>
@@ -648,7 +707,7 @@
       </div>
 
       <div class="offer__product-info">
-        <ul class="offer__product-list offer__product-list-info">
+        <ul class="offer__product-list">
           <li class="offer__product-item offer__product-item-name">Асафьев Стас</li>
           <li class="offer__product-item">
             <img
@@ -673,9 +732,10 @@
           </li>
         </ul>
 
-        <ul class="offer__product-list">
+        <ul class="offer__product-list offer__product-list-info">
           <li class="offer__product-item offer__product-item-rating">5.0 рейтинг</li>
-          <li class="offer__product-item">231 отзыв</li>
+          <li class="offer__product-item offer__product-item-reviews">231 отзыв</li>
+          <li class="offer__product-item-m">5.0/<span>231 отзыв</span></li>
           <li class="offer__product-item offer__product-item-local">Санкт-Петербург</li>
         </ul>
       </div>
@@ -692,15 +752,18 @@
       </div>
 
       <div class="offer__product-delivery">
-        <h3 class="offer__product-delivery-title">Доставка продавца</h3>
-        <p class="offer__product-delivery-desc">
-          Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-        </p>
-
-        <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
-        <p class="offer__product-delivery-desc">
-          Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
-        </p>
+        <div class="offer__product-delivery-box">
+          <h3 class="offer__product-delivery-title">Доставка продавца</h3>
+          <p class="offer__product-delivery-desc">
+            Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+          </p>
+        </div>
+        <div class="offer__product-delivery-box">
+          <h3 class="offer__product-delivery-title">Доставка Machinerea</h3>
+          <p class="offer__product-delivery-desc">
+            Транспортной компанией, завтра 14 августа — <span>150 руб.</span>
+          </p>
+        </div>
       </div>
 
       <div class="offer__product-price">
@@ -716,7 +779,6 @@
 
       <div class="offer__product-cart">
         <button class="offer__product-btn">Добавить в корзину</button>
-        <button class="offer__product-btn-more">Добавить в корзину</button>
       </div>
     </div>
   </div>

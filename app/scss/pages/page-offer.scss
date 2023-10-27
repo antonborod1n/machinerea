@@ -2,18 +2,18 @@
 .offer-page {
   .wrapper {
     display: grid;
-    grid-template-columns: minmax(320px, 1088px) 320px;
+    grid-template-columns: minmax(290px, 1088px) 320px;
     grid-template-rows: repeat(2, auto) 1fr;
     grid-column-gap: 48px;
     grid-row-gap: 0px;
     padding-bottom: 96px;
 
     @media (max-width: 1300px) {
-      grid-template-columns: minmax(320px, 1088px) 210px;
+      grid-template-columns: minmax(290px, 1088px) 210px;
       grid-column-gap: 24px;
     }
 
-    @media (max-width: 998px) {
+    @media (max-width: 768px) {
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
       grid-column-gap: 0;
@@ -31,13 +31,17 @@
   .aside {
     grid-area: 2 / 2 / 4 / 3;
 
-    @media (max-width: 998px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
 }
 
 .top-offer {
+  @media (max-width: 1200px) {
+    display: none;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -221,6 +225,11 @@
       &-toorder {
         color: $yellow;
       }
+
+      @media (max-width: 768px) {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
 
     &__item,
@@ -228,6 +237,11 @@
       color: $gray;
       font-size: 12px;
       line-height: 18px;
+    }
+
+    &__icon {
+      width: 16px;
+      height: 16px;
     }
   }
   .tip-box {
@@ -297,6 +311,20 @@
     }
   }
 
+  &__title {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    @extend %sourcesans-600;
+
+    @media (max-width: 768px) {
+      position: static;
+      visibility: visible;
+      opacity: 1;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
   &__content {
     margin-bottom: 96px;
     border: 1px solid #d9d9d9;
@@ -318,25 +346,34 @@
       border-bottom: none;
     }
 
-    &-first {
-      @media (max-width: 768px) {
-        border-radius: 5px;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-        border-bottom: none;
-        margin-bottom: 48px;
-      }
-    }
-
     @media (max-width: 1300px) {
       grid-template-columns: 70px repeat(3, auto);
       grid-template-rows: repeat(2, auto);
     }
 
     @media (max-width: 768px) {
+      position: relative;
       grid-template-columns: 70px auto;
       grid-template-rows: repeat(6, auto);
       grid-column-gap: 8px;
-      padding: 16px;
+      padding: 10px 0 16px;
+    }
+
+    &-first {
+      @media (max-width: 768px) {
+        border-radius: 5px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+        border-bottom: none;
+        margin-bottom: 48px;
+        padding: 10px 16px 16px;
+      }
+      .offer__product-price {
+        &::after {
+          @media (max-width: 768px) {
+            right: 16px;
+          }
+        }
+      }
     }
 
     &-img-box {
@@ -351,7 +388,7 @@
         grid-area: 1 / 1 / 4 / 2;
       }
     }
-    &-box1 {
+    &-box {
       grid-area: 1 / 2 / 2 / 3;
 
       @media (max-width: 1300px) {
@@ -361,6 +398,9 @@
       @media (max-width: 768px) {
         grid-area: 1 / 2 / 2 / 3;
       }
+    }
+    &-tags-box {
+      padding-right: 20px;
     }
     &-availability {
       grid-area: 2 / 2 / 3 / 3;
@@ -403,16 +443,89 @@
         grid-area: 4 / 1 / 5 / 3;
         margin: 16px 0;
       }
-    }
-    &-price {
-      grid-area: 1 / 5 / 2 / 6;
 
-      @media (max-width: 1300px) {
-        grid-area: 1 / 4 / 2 / 5;
+      &-text {
+        display: none;
+
+        @media (max-width: 768px) {
+          display: block;
+          color: $gray;
+          font-size: 12px;
+          line-height: 18px;
+          margin-bottom: 16px;
+        }
       }
 
-      @media (max-width: 768px) {
-        grid-area: 2 / 2 / 3 / 3;
+      &-box {
+        margin-bottom: 16px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 4px;
+        }
+      }
+
+      &-title {
+        font-size: 14px;
+        line-height: 22px;
+        color: $text;
+        margin-bottom: 4px;
+
+        @media (max-width: 768px) {
+          display: inline;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+
+      &-desc {
+        font-size: 12px;
+        line-height: 18px;
+        color: $text;
+
+        @media (max-width: 768px) {
+          display: inline;
+        }
+
+        span {
+          color: $green;
+        }
+      }
+      &-item {
+        position: relative;
+        font-size: 12px;
+        line-height: 18px;
+        color: $text;
+        margin-bottom: 8px;
+        padding-left: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.pickup::before {
+          position: absolute;
+          top: 1px;
+          left: 0;
+          content: url('../images/icons/delivery-box-seam.svg');
+        }
+        &.courier::before {
+          position: absolute;
+          top: 1px;
+          left: 0;
+          content: url('../images/icons/delivery-tabler-run.svg');
+        }
+        &.seller::before {
+          position: absolute;
+          top: 1px;
+          left: 0;
+          content: url('../images/icons/delivery-tabler-car.svg');
+        }
+        &.company::before {
+          position: absolute;
+          top: 1px;
+          left: 0;
+          content: url('../images/icons/delivery-big-car.svg');
+        }
       }
     }
     &-cart {
@@ -433,7 +546,13 @@
       @extend %sourcesans-600;
       font-size: 16px;
       line-height: 22px;
-      margin: 5px 0 5px;
+      margin: 5px 0;
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 5px 0 0;
+      }
     }
     &-state {
       display: inline-flex;
@@ -445,9 +564,28 @@
       background-color: #f4f4f4;
       margin-bottom: 12px;
 
+      @media (max-width: 768px) {
+        min-width: 140px;
+        gap: 4px;
+        padding: 4px;
+        margin-bottom: 4px;
+      }
+
       span {
         font-size: 14px;
         line-height: 22px;
+
+        @media (max-width: 768px) {
+          font-size: 10px;
+          line-height: 14px;
+        }
+      }
+
+      &-img {
+        @media (max-width: 768px) {
+          width: 44px;
+          height: 12px;
+        }
       }
     }
     &-list {
@@ -458,6 +596,12 @@
 
       &.offer__product-list-info {
         flex-wrap: nowrap;
+      }
+
+      &-info {
+        @media (max-width: 768px) {
+          justify-content: space-between;
+        }
       }
     }
     &-item {
@@ -470,6 +614,10 @@
         color: $blue;
         margin-bottom: 4px;
         white-space: nowrap;
+
+        @media (max-width: 768px) {
+          margin-bottom: 0;
+        }
       }
 
       &.offer__product-item-rating {
@@ -479,6 +627,26 @@
       &-local {
         font-size: 12px;
         line-height: 18px;
+      }
+      &-rating,
+      &-reviews {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      &-m {
+        display: none;
+
+        span {
+          color: $gray;
+        }
+
+        @media (max-width: 768px) {
+          display: block;
+          font-size: 14px;
+          line-height: 22px;
+        }
       }
     }
     &-item-img {
@@ -511,73 +679,40 @@
       left: 0;
       content: url('../images/icons/emai-bluel.svg');
     }
-    &-delivery-title {
-      font-size: 14px;
-      line-height: 22px;
-      color: $text;
-      margin-bottom: 4px;
-    }
-    &-delivery-desc {
-      font-size: 12px;
-      line-height: 18px;
-      color: $gray;
-      margin-bottom: 16px;
-
-      span {
-        color: $green;
-      }
-    }
-    &-delivery-item {
-      position: relative;
-      font-size: 12px;
-      line-height: 18px;
-      color: $text;
-      margin-bottom: 8px;
-      padding-left: 24px;
-
-      &.pickup::before {
-        position: absolute;
-        top: 1px;
-        left: 0;
-        content: url('../images/icons/delivery-box-seam.svg');
-      }
-      &.courier::before {
-        position: absolute;
-        top: 1px;
-        left: 0;
-        content: url('../images/icons/delivery-tabler-run.svg');
-      }
-      &.seller::before {
-        position: absolute;
-        top: 1px;
-        left: 0;
-        content: url('../images/icons/delivery-tabler-car.svg');
-      }
-      &.company::before {
-        position: absolute;
-        top: 1px;
-        left: 0;
-        content: url('../images/icons/delivery-big-car.svg');
-      }
-    }
     &-price {
       position: relative;
+      grid-area: 1 / 5 / 2 / 6;
+
+      @media (max-width: 1300px) {
+        grid-area: 1 / 4 / 2 / 5;
+      }
+
+      @media (max-width: 768px) {
+        position: static;
+        max-width: 270px;
+        grid-area: 2 / 2 / 3 / 3;
+      }
 
       &::after {
         position: absolute;
         top: 3px;
         right: 0;
         content: url('../images/icons/warning.svg');
-      }
 
-      @media (max-width: 768px) {
-        max-width: 270px;
+        @media (max-width: 768px) {
+          top: 16px;
+          right: 0;
+        }
       }
     }
     &-price-box {
       display: flex;
       align-items: center;
       margin-bottom: 8px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 0;
+      }
     }
     &-price-new {
       @extend %sourcesans-600;
@@ -619,7 +754,7 @@
         width: 100%;
       }
 
-      &-details {
+      &-more {
         @extend %btn-r;
         display: flex;
         justify-content: center;
@@ -631,20 +766,6 @@
         line-height: 22px;
         border: 1px solid $accent;
         color: $accent;
-      }
-
-      &-more {
-        display: none;
-        @extend %btn-r;
-        @extend %sourcesans-600;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        border: 1px solid $accent;
-        color: $accent;
-        width: 205px;
-        height: 46px;
-        padding: 12px 30px;
 
         @media (max-width: 768px) {
           display: inline-flex;
@@ -663,6 +784,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 16px 0 8px;
     }
 
     .label-name {
@@ -689,5 +811,19 @@
       @extend %btn-r;
       color: $gray;
     }
+  }
+}
+
+.offer__info {
+  &-title {
+    @media (max-width: 768px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &-text {
+    color: $gray;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
