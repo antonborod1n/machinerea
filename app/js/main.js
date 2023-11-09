@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const swiperProductNarrow = new Swiper('.first-screen__swiper-narrow', {
     slidesPerView: 4,
-    spaceBetween: 10,
+    spaceBetween: 20,
     loopedSlides: 4,
     freeMode: true,
     watchSlidesVisibility: true,
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const screenWidth = window.innerWidth;
 
-  if (screenWidth < 768) {
+  if (screenWidth < 1000) {
     const editBtns = document.querySelectorAll('.btn-edit-js');
 
     editBtns.forEach((item) => {
@@ -226,11 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const menuBtn = document.querySelectorAll('.tabs__btn');
       const menuContent = document.querySelectorAll('.tabs__item');
 
-      console.log(tabsContentId);
-      console.log(subMenu);
-      console.log(menuBtn);
-      console.log(menuContent);
-
       menuBtn.forEach((item) => {
         item.classList.remove('is-active');
       });
@@ -265,12 +260,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }); */
 
   //show drop menu breadcrumbs
-  /*   const dropBtn = document.querySelector('.breadcrumbs__item.drop-down');
-  const dropMenu = dropBtn.querySelector('.drop-down__menu');
+  const dropBtn = document.querySelector('.breadcrumbs__item.drop-down');
+  const dropMenu = document.querySelector('.drop-down__menu');
+
+  console.log(dropBtn);
+  console.log(dropMenu);
 
   dropBtn.addEventListener('click', function () {
     dropMenu.classList.toggle('is-active');
-  }); */
+  });
 
   //show phone btn
   /*   const showPhone = document.querySelector('.js-show-phone');
@@ -365,9 +363,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const sortDropdownMenu = document.querySelector('.sort__dropdown');
   const offerSortBtn = document.querySelectorAll('.offer__sort-btn1');
-
-  console.log(sortDropdownMenu);
-  console.log(offerSortBtn);
 
   /* offerSortBtn.addEventListener('click', function () {
     sortDropdownMenu.classList.add('is-active');

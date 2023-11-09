@@ -10,26 +10,28 @@
 
   <body>
     <!--=include general/header.html -->
-    <main class="main product-page">
-      <!--=include general/breadcrumbs.html -->
+    <main class="main announcement-page product-page">
+      <!--=include general/breadcrumbs2.html -->
       <div class="container">
         <div class="wrapper">
           <div class="top">
-            <!--=include block/control.html -->
+            <!--=include block/control2.html -->
           </div>
 
+          <section class="first-screen">
+            <!--=include block/first-screen2.html -->
+          </section>
+
           <div class="content">
-            <!--=include block/first-screen.html -->
             <!--=include block/tabs.html -->
             <!--=include block/description.html -->
             <!--=include block/advertising.html -->
-            <!--=include block/watched.html -->
             <!--=include block/recommend.html -->
             <!--=include block/bottom.html -->
           </div>
 
           <aside class="aside">
-            <!--=include block/widgets.html -->
+            <!--=include block/widgets2.html -->
           </aside>
         </div>
       </div>
@@ -42,12 +44,21 @@
   <div class="dev-block">
     <ul class="dev-block__pages">
       <li><a href="/">Главная</a></li>
-      <li><a href="catalog.html">Каталог</a></li>
-      <li><a href="product.html">Товар</a></li>
-      <li><a href="offer.html">Предложение</a></li>
+      <li><a href="catalog.html">1.Каталог</a></li>
+      <li><a href="product.html">2.Карточка товара</a></li>
+      <li><a href="offer.html">3.Предложения продавцов</a></li>
+      <li>
+        <a href="announcement.html">4.Предложение конкретного продавца</a>
+      </li>
     </ul>
+    <div class="dev-block-box">
+      <button class="dev-block-btn js-modal1">modal1</button>
+      <button class="dev-block-btn js-modal2">modal2</button>
+      <button class="dev-block-btn js-quick-order">quick-order</button>
+    </div>
   </div>
 
+  <script src="js/modal.js"></script>
   <script src="js/main.min.js"></script>
 
   <style>
@@ -56,7 +67,7 @@
       bottom: 0;
       right: 0;
       width: 200px;
-      padding: 20px;
+      padding: 10px;
       background: #fff;
       border: 1px solid #999;
       opacity: 0.3;
@@ -65,8 +76,26 @@
     .dev-block:hover {
       opacity: 0.9;
     }
+
+    .dev-block-box {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .dev-block-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      color: #1a1d1b;
+      font-size: 13px;
+      border-radius: 5px;
+      padding: 2px;
+      cursor: pointer;
+    }
     .dev-block__pages {
-      margin-bottom: 10px;
+      margin-bottom: 10px !important;
     }
     .dev-block__pages li {
       margin-left: 6px;
@@ -74,6 +103,12 @@
     .dev-block__pages .is-current {
       color: #666;
       font-weight: bold;
+    }
+    .dev-block__pages a {
+      font-size: 13px;
+      color: #4192d9;
+      text-decoration: none;
+      cursor: pointer;
     }
     .dev-block__switch {
       position: relative;
