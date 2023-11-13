@@ -15,7 +15,7 @@
   display: grid;
   grid-template-rows: 58px 108px;
 
-  @media (max-width: 1360px) {
+  @media (max-width: 1390px) {
     grid-template-rows: 58px auto;
   }
 
@@ -58,7 +58,7 @@
 
   &__slogan {
     color: $gray;
-    @media (max-width: 1360px) {
+    @media (max-width: 1390px) {
       display: none;
     }
   }
@@ -107,10 +107,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 24px 0;
-
-    @media (max-width: 1360px) {
-      grid-row-gap: 16px;
-    }
+    gap: 16px 8px;
 
     @media (max-width: 768px) {
       display: grid;
@@ -125,7 +122,8 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    @media (max-width: 1360px) {
+
+    @media (max-width: 1390px) {
       order: 1;
       width: 100%;
     }
@@ -170,7 +168,7 @@
       color: $text;
     }
 
-    @media (max-width: 1360px) {
+    @media (max-width: 1390px) {
       width: 100%;
     }
 
@@ -430,8 +428,8 @@
     opacity: 1;
   }
 
-  @media (max-width: 1360px) {
-    top: 156px;
+  @media (max-width: 1390px) {
+    top: 242px;
   }
 
   @media (max-width: 768px) {
@@ -869,6 +867,10 @@
     @media (max-width: 768px) {
       max-width: 148px;
     }
+  }
+
+  &__partner-logo {
+    width: 167px;
   }
 
   &__top {
@@ -2203,13 +2205,24 @@
   &__dropdown {
     display: none;
 
-    &.is-active {
-      display: block;
-    }
-
     @media (max-width: 768px) {
-      position: relative;
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
       display: block;
+
+      &.is-active {
+        visibility: visible;
+        opacity: 1;
+        top: 30px;
+        left: 0;
+        z-index: 10;
+        padding: 8px;
+        width: 120px;
+        border-radius: 5px;
+        background-color: $white;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+      }
     }
 
     &-name {
@@ -2225,19 +2238,9 @@
 
     &-menu {
       @media (max-width: 768px) {
-        position: absolute;
-        top: 30px;
-        left: 0;
-        z-index: 10;
-        padding: 8px;
-        width: 120px;
-        border-radius: 5px;
-        background-color: $white;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
         gap: 8px;
-        display: none; // убрать
       }
     }
 
@@ -3749,6 +3752,7 @@
   .descr {
     &__list {
       max-width: 287px;
+      width: 100%;
       gap: 4px;
       margin-bottom: 0;
     }
@@ -6105,6 +6109,7 @@
     }
 
     &__sort {
+      position: relative;
       padding: 36px 0 24px;
 
       @media (max-width: 768px) {

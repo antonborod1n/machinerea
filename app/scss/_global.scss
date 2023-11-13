@@ -151,6 +151,8 @@ input {
   &__item {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    word-break: break-all;
     gap: 4px;
   }
   &__term {
