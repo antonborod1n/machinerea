@@ -40,7 +40,7 @@ function styles() {
 
 function scripts() {
   return src([
-    'app/js/*.js',
+    'app/js/main.js',
     'node_modules/swiper/swiper-bundle.min.js',
     'node_modules/nouislider/dist/nouislider.min.js',
   ])
