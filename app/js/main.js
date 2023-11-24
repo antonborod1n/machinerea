@@ -1,8 +1,3 @@
-import './accardion.js';
-import './filter.js';
-import './modal.js';
-import './sort.js';
-
 document.addEventListener('DOMContentLoaded', () => {
   const swipers = new Swiper('.swiper__catalog-top', {
     slidesPerView: 'auto',
