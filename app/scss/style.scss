@@ -13,23 +13,21 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: 58px 108px;
+  grid-template-rows: 46px 78px;
 
   @media (max-width: 1390px) {
-    grid-template-rows: 58px auto;
+    grid-template-rows: 46px auto;
   }
 
   @media (max-width: 768px) {
     grid-template-rows: 1fr;
   }
-
   .logo__img {
     max-width: 235px;
     height: auto;
   }
-
   &__top {
-    padding: 16px 0;
+    padding: 10px 0;
     border-bottom: 1px solid $mid-gray;
 
     @media (max-width: 768px) {
@@ -106,7 +104,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 24px 0;
+    padding: 16px 0;
     gap: 16px 8px;
 
     @media (max-width: 768px) {
@@ -1684,7 +1682,8 @@
     &.drop-down {
       position: relative;
       padding-right: 20px;
-      background-image: url('../images/icons/chevron-down-gray16.svg');
+      /* background-image: url('../images/icons/chevron-down-gray12.svg'); */
+      background-image: url('../images/icons/chevron-down-black12.svg');
       background-repeat: no-repeat;
       background-position: center right;
       cursor: pointer;
@@ -1694,6 +1693,8 @@
   &__link {
     color: inherit;
     white-space: nowrap;
+    font-size: 14px;
+    line-height: 22px;
 
     span {
       color: $blue;

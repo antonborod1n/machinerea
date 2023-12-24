@@ -68,7 +68,7 @@ input {
   font-size: 14px;
   line-height: 22px;
   background-color: $green;
-  color: #ffffff;
+  color: $white;
   border-radius: 5px;
 
   @media (max-width: 768px) {
@@ -79,6 +79,7 @@ input {
 .reviews {
   font-size: 14px;
   line-height: 22px;
+  color: $gray;
 
   @media (max-width: 768px) {
     font-size: 12px;
@@ -103,7 +104,7 @@ input {
   display: inline;
   border-radius: 5px;
   padding: 5px 10px;
-  color: #ffffff;
+  color: $white;
   font-size: 10px;
   line-height: 14px;
   text-transform: uppercase;
@@ -219,7 +220,7 @@ input {
   height: 36px;
   border-radius: 5px;
   border: 1px solid $mid-gray;
-  background: #ffffff;
+  background: $white;
   padding: 0 16px;
   cursor: auto;
 
@@ -279,7 +280,7 @@ input {
     height: 16px;
     border-radius: 3px;
     border: 1px solid $mid-gray;
-    background-color: #ffffff;
+    background-color: $white;
   }
 }
 .radio {
@@ -300,7 +301,7 @@ input {
     height: 15px;
     border-radius: 50%;
     border: 1px solid $mid-gray;
-    background-color: #ffffff;
+    background-color: $white;
   }
 }
 /* STAR */
