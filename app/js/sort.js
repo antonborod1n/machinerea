@@ -1,6 +1,6 @@
 //start - sort
-const sortDropdownMenu = document.querySelector('.sort__dropdown');
-const offerSortBtn = document.querySelector('.offer__sort-btn-new');
+const sortDropdownMenu = document.querySelector('.sort__dropdown-menu');
+const offerSortBtn = document.querySelector('.sort__dropdown-name');
 
 offerSortBtn.addEventListener('click', function () {
   sortDropdownMenu.classList.toggle('is-active');
