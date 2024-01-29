@@ -36,10 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  const swiperProduct = new Swiper('.swiper-product', {
+  const swiperWatched = new Swiper('.swiper-watched', {
     slidesPerView: 5,
     spaceBetween: 16,
-    loop: true,
+    /*     loop: true, */
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const swiperRecommend = new Swiper('.swiper-recommend', {
+    slidesPerView: 5,
+    spaceBetween: 16,
+    /*     loop: true, */
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

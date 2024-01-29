@@ -1878,11 +1878,35 @@
   }
 }
 /*RECOMMEND */
-.recommend {
+.recommend,
+.watched {
   padding-top: 96px;
 
   @media (max-width: 768px) {
     padding-top: 48px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .swiper__btns-box {
+    position: relative;
+
+    .swiper-button-prev {
+      left: -76px;
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
   }
 
   .price-old {
@@ -1943,18 +1967,6 @@
           margin-bottom: 0;
         }
       }
-    }
-  }
-
-  &__wrapper {
-    position: relative;
-  }
-
-  &-title {
-    margin-bottom: 36px;
-
-    @media (max-width: 768px) {
-      margin-bottom: 20px;
     }
   }
 
@@ -1973,11 +1985,34 @@
   }
 }
 /*WATCHED */
-.watched {
+/* .watched {
   padding-top: 96px;
 
   @media (max-width: 768px) {
     padding-top: 48px;
+  }
+
+  .watched__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .swiper__btns-box {
+    position: relative;
+
+    .swiper-button-prev {
+      left: -76px;
+    }
+
+    .swiper-button-next {
+      right: 0;
+    }
   }
 
   .price-old {
@@ -2041,18 +2076,6 @@
     }
   }
 
-  &__wrapper {
-    position: relative;
-  }
-
-  &-title {
-    margin-bottom: 36px;
-
-    @media (max-width: 768px) {
-      margin-bottom: 20px;
-    }
-  }
-
   &__box {
     display: flex;
   }
@@ -2066,7 +2089,7 @@
       height: 113px;
     }
   }
-}
+} */
 /*SORT */
 .sort {
   @media (max-width: 768px) {
@@ -3853,13 +3876,13 @@
         }
       }
 
-      &__btns-box {
+      /*       &__btns-box {
         .swiper-button {
           @media (max-width: 1550px) {
             display: none;
           }
         }
-      }
+      } */
     }
   }
 
@@ -4034,14 +4057,6 @@
         @media (max-width: 768px) {
           gap: 8px;
         }
-      }
-    }
-  }
-
-  .swiper__btns-box {
-    .swiper-button {
-      @media (max-width: 1550px) {
-        display: none;
       }
     }
   }
@@ -6308,11 +6323,11 @@
   }
 
   .swiper__btns-box {
-    .swiper-button {
+    /*     .swiper-button {
       @media (max-width: 1550px) {
         display: none;
       }
-    }
+    } */
 
     .swiper-button-next.reviews__button-next {
       transform: translateY(-50%);

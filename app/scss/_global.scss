@@ -352,6 +352,9 @@ input {
       width: 24px;
       height: 24px;
     }
+    @media (max-width: 768px) {
+      display: none;
+    }
     .swiper-button-prev {
       top: 50%;
       transform: translateY(50%);
@@ -360,7 +363,6 @@ input {
       background-repeat: no-repeat;
       background-position: center center;
     }
-
     .swiper-button-next {
       top: 50%;
       transform: translateY(50%);
