@@ -326,5 +326,5 @@ document.addEventListener('DOMContentLoaded', () => {
   mobilePrevBtn.addEventListener('click', function () {
     mobileFilter.classList.remove('is-active');
   });
-  /*end - filter */
+  /*end - filter */ z;
 });
